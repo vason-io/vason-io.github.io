@@ -71,6 +71,7 @@ const sidebars = {
   ],
   supportSidebar: [
     'terms-of-service',
+    'privacy-policy',
     'contact',
 
   ]
