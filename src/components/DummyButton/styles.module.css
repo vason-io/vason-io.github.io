@@ -1,0 +1,6 @@
+.dummyButton {
+  background-color: #eee;
+  padding: 1px 5px;
+  border: 1px solid black;
+  white-space: nowrap;
+}
