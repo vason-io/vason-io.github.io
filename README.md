@@ -23,6 +23,9 @@ For Windows: Go to https://github.com/coreybutler/nvm-windows/releases/latest, d
 ## Setup yarn
     npm install --global yarn
 
+## Convert SVG to ICO
+https://image.online-convert.com/convert/svg-to-ico
+
 ### Installation
 
 ```
