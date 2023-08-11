@@ -137,10 +137,7 @@ const config = {
         },
 };
 
-// TODO: Parameterize
-if (true) {
-    // noinspection JSUnresolvedReference
-    // @ts-ignore
+if (process.env.NODE_ENV === "production") {
     config.themeConfig.navbar['items'].shift()
 }
 
