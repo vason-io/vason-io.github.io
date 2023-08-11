@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Vason v.1.1.1 Beta',
+    title: 'Vason (Beta)',
     tagline: 'Visualize & Analyse JSON',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
-    url: 'https://vason.io',
+    url: 'https://docs.vason.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'vason', // Usually your GitHub org/user name.
-    projectName: 'vason', // Usually your repo name.
+    organizationName: 'vason-io', // Usually your GitHub org/user name.
+    projectName: 'vason-io', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -79,56 +79,11 @@ const config = {
                         position: 'left',
                         label: 'Support',
                     },
-                    /*          {to: '/blog', label: 'Blog', position: 'left'},*/
-                    /*          { href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right', },*/
                 ],
             },
             footer: {
-                style: 'light', /* dark */
-                /*
-                        links: [
-                          {
-                            title: 'Docs',
-                            items: [
-                              {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                              },
-                            ],
-                          },
-                          {
-                            title: 'Community',
-                            items: [
-                              {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                              },
-                              {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                              },
-                              {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                              },
-                            ],
-                          },
-                          {
-                            title: 'More',
-                            items: [
-                              {
-                                label: 'Blog',
-                                to: '/blog',
-                              },
-                              {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
-                              },
-                            ],
-                          },
-                        ],
-                 */
-                copyright: `Copyright © ${new Date().getFullYear()} Vason.`, /* My Project, Inc. Built with Docusaurus */
+                style: 'light',
+                copyright: `Copyright © ${new Date().getFullYear()} Vason.`,
             },
             prism: {
                 theme: lightCodeTheme,
