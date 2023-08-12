@@ -35,26 +35,26 @@ jobs:
       - name: 📥 Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: 🛠️ Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
 
-      - name: Install dependencies
+      - name: 📚  Install dependencies
         run: yarn
 
-      - name: Build
+      - name: 🏗️ Build
         run: yarn build
 
-      - name: Setup Pages
+      - name: 📄 Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
+      - name: 📤 Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: build # Upload entire repository
 
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
