@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: ''
+---
+
 # Privacy Policy
 
 ### Introduction
@@ -6,7 +11,7 @@ This Privacy Policy explains how Vason ("we," "us," or "Vason") collects, uses, 
 and data of users ("you" or "User") of the Vason SaaS platform ("the Service"). By using the Service, you agree to
 comply with and be bound by this Privacy Policy.
 
-### Information We Do Not Collect or Store
+### Information We Do Not Collect
 
 Vason does not collect, store, inspect, analyze, or in any way trade data that passes through Vason's
 Cross-Origin Resource Sharing (CORS) proxy service. We do not retain any user-generated content or personally

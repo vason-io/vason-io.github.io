@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+
+const isProd = process.env.NODE_ENV === 'production';
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -39,16 +41,9 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    /*editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',*/
+                    routeBasePath: '/'
                 },
-                blog: {
-                    showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    /*editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',*/
-                },
+                blog: false,
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
@@ -59,23 +54,22 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         {
-            // Replace with your project's social card
             navbar: {
                 title: 'Vason',
                 logo: {
-                    alt: 'Vason Logo',
+                    alt: 'Vason logo',
                     src: 'img/logo.svg',
                 },
                 items: [
-                    {
+                    isProd ? {} : {
                         type: 'docSidebar',
-                        sidebarId: 'documentationSidebar',
+                        sidebarId: 'documentation',
                         position: 'left',
                         label: 'Documentation',
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'supportSidebar',
+                        sidebarId: 'support',
                         position: 'left',
                         label: 'Support',
                     },
@@ -91,9 +85,5 @@ const config = {
             },
         },
 };
-
-if (process.env.NODE_ENV === "production") {
-    config.themeConfig.navbar['items'].shift()
-}
 
 module.exports = config;

@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+description: ''
+---
+
 # Refund Policy
 
 ### Introduction
@@ -16,7 +21,7 @@ policy. You are eligible for a refund under the following circumstances:
 ### Requesting a Refund
 
 To request a refund, you must contact Vason's customer support within 14 days of the incident or situation that
-qualifies you for a refund. You can reach our customer support team by means specified in the [Contact](./contact.md)
+qualifies you for a refund. You can reach our customer support team by means specified in the [Contact](contact.md)
 page. Please provide detailed information about the issue, including relevant account details such as email address and
 evidence of Vason's failure to meet its obligations.
 

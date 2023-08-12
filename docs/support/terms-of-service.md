@@ -1,6 +1,9 @@
-# Terms of Service
+---
+sidebar_position: 1
+description: ''
+---
 
-Effective Date: August 12, 2023
+# Terms of Service
 
 ### Introduction and Acceptance of Terms
 
@@ -31,7 +34,7 @@ You agree to immediately notify Vason of any unauthorized use of your account or
 ### CORS Proxy
 
 Vason may use its internal Cross-Origin Resource Sharing (CORS) proxy service to facilitate functionality pertaining to
-Vason's HTTP request editor. The CORS proxy service is subject to our [Privacy Policy](./privacy-policy.md).
+Vason's HTTP request editor. The CORS proxy service is subject to our [Privacy Policy](privacy-policy.md).
 
 ### Intellectual Property
 
@@ -41,7 +44,7 @@ not copy, modify, distribute, sell, or lease any part of the Service without our
 ### Payment and Billing
 
 Vason offers recurring subscription for accessing premium features. Vason partners with Stripe for secured and
-simplified billing. Any refund requests are subject to our [Refund Policy](./refund-policy.md).
+simplified billing. Any refund requests are subject to our [Refund Policy](refund-policy.md).
 
 ### Termination
 
@@ -50,7 +53,7 @@ account for violations of these Terms or for any other reason at our sole discre
 
 ### Privacy and Data Protection
 
-Your use of the Service is subject to our [Privacy Policy](./privacy-policy.md), which explains how we collect,
+Your use of the Service is subject to our [Privacy Policy](privacy-policy.md), which explains how we collect,
 use, and protect your personal data.
 
 ### Disclaimer of Warranties
