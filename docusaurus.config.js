@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 
-const isProd = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -61,7 +61,7 @@ const config = {
                     src: 'img/logo.svg',
                 },
                 items: [
-                    isProd ? {} : {
+                    isDev && {
                         type: 'docSidebar',
                         sidebarId: 'documentation',
                         position: 'left',
@@ -73,7 +73,12 @@ const config = {
                         position: 'left',
                         label: 'Support',
                     },
-                ],
+                    {
+                        href: 'https://vason.io',
+                        label: "Open Vason",
+                        position: 'right',
+                    },
+                ].filter(Boolean),
             },
             footer: {
                 style: 'light',
