@@ -1,66 +1,49 @@
 # Privacy Policy
 
-## Introduction
+### Introduction
 
-Welcome to Vason ("we," "our," or "us"). We value your privacy and are committed to protecting your personal
-information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our
-services ("Services").
+This Privacy Policy explains how Vason ("we," "us," or "Vason") collects, uses, and protects the personal information
+and data of users ("you" or "User") of the Vason SaaS platform ("the Service"). By using the Service, you agree to
+comply with and be bound by this Privacy Policy.
 
-Please read this Privacy Policy carefully. By accessing or using our Services, you consent to the practices described in
-this Privacy Policy.
+### Information We Do Not Collect or Store
 
-## Information We Collect
+Vason does not collect, store, inspect, analyze, or in any way trade data that passes through Vason's
+Cross-Origin Resource Sharing (CORS) proxy service. We do not retain any user-generated content or personally
+identifiable information beyond what is necessary for the basic operation of the Service.
 
-### Personal Information
+### Information We Collect
 
-We may collect personal information that you provide directly to us, such as your email address, and billing information
-when you register for an account or use our Services.
+While we do not collect personal data as described above, we may collect certain non-personal information, such as:
 
-### Usage and Analytics Data
+- Account information: We collect basic account information (such as an email address provided by a User), required for
+  authenticating Users within the Service.
+- Log Data: We may collect information that your browser sends whenever you visit the Service. This may include your IP
+  address, browser type, browser version, the pages of the Service that you visit, the time and date of your visit, and
+  other statistics.
+- Cookies: We may use cookies solely for the purpose of providing necessary functionality such as user authentication.
 
-We automatically collect certain information when you access or use our Services. This may include your IP address,
-browser type, device type, and operating system.
+### Use of Information
 
-## How We Use Your Information
+The limited information we collect is used solely for the purpose of improving the functionality and performance of the
+Service. We do not use this information to identify individual users or for any targeted advertising.
 
-We use the information we collect to:
+### Third-Party Services
 
-- Provide, maintain, and improve our Services.
-- Send you important updates, and promotional materials.
-- Respond to your comments, questions, and requests.
-- Monitor and analyze usage patterns and trends.
+Vason may use third-party services or tools to analyze non-personal usage data, improve user experience, and optimize
+the Service. These third-party services are governed by their own privacy policies.
 
-## Disclosure of Your Information
+### Data Security
 
-We may share your information:
+Vason takes reasonable measures to protect the limited information we collect from unauthorized access, disclosure,
+alteration, or destruction.
 
-- With our trusted third-party service providers who assist us in providing, maintaining, and improving our Services.
-- With legal and law enforcement authorities in response to a legal request or court order.
-- In connection with a merger, sale, or acquisition of all or a portion of our business.
+### Changes to the Privacy Policy
 
-## Your Choices
-
-You can:
-
-- Access, update, and correct your account information.
-- Opt-out of receiving promotional emails.
-- Disable cookies through your browser settings.
-
-## Data Security
-
-We implement and maintain reasonable security measures to protect your information from unauthorized access, loss,
-misuse, or disclosure. However, no data transmission over the internet is entirely secure, and we cannot guarantee the
-security of your information.
-
-## Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. Any changes will be effective when posted on this page.
-
-## Contact Us
-
-If you have any questions about this Privacy Policy, please contact us at [contact@yourdomain.com].
+Vason reserves the right to update or modify this Privacy Policy at any time. Any changes will be effective upon posting
+to the Service. Your continued use of the Service after the posting of changes constitutes your acceptance of the
+modified Privacy Policy.
 
 ---
 
-This Privacy Policy is intended to provide a general overview of how we handle your information. For more detailed
-information, please refer to our complete Privacy Policy available on our website.
+Effective Date: August 12, 2023
