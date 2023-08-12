@@ -7,7 +7,6 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
 import styles from "./index.module.css";
 import { config } from "@site/src/util/config";
-import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 function HomepageHeader(): ReactElement {
   const { siteConfig } = useDocusaurusContext();
@@ -23,7 +22,7 @@ function HomepageHeader(): ReactElement {
               className="button button--secondary button--lg"
               to="documentation"
             >
-              <Translate>Documentation</Translate>
+              Documentation
             </Link>
           )}
 
