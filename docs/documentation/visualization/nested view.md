@@ -19,7 +19,3 @@ In this window the JSON is presented in the form of nested tables.
 You can click on {...} to pop up (drilldown) the child object in a new window.
 
 <EscCloseWindow/>
-
-
-
-

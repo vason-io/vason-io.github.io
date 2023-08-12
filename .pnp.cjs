@@ -34,11 +34,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/types", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.4.1"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
             ["@tsconfig/docusaurus", "npm:1.0.7"],\
+            ["@types/node", "npm:18.17.5"],\
             ["clsx", "npm:1.2.1"],\
+            ["prettier", "npm:3.0.1"],\
             ["prism-react-renderer", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.3.5"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:17.0.2"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"]\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5005,6 +5007,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["npm:18.17.5", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.17.5-e736eb2acc-b8c658a992.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.17.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:20.4.8", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.4.8-f8f2d8d349-86a3963c0c.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -7458,11 +7467,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/types", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.4.1"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
             ["@tsconfig/docusaurus", "npm:1.0.7"],\
+            ["@types/node", "npm:18.17.5"],\
             ["clsx", "npm:1.2.1"],\
+            ["prettier", "npm:3.0.1"],\
             ["prism-react-renderer", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.3.5"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:17.0.2"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"]\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -12041,6 +12052,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["prettier", [\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-3.0.1-d00deab00c-e1f3f16c7f.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:3.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["pretty-error", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/pretty-error-npm-4.0.0-7cca1fe4ad-a5b9137365.zip/node_modules/pretty-error/",\
@@ -14159,10 +14179,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["typescript", [\
-        ["patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587", {\
-          "packageLocation": "./.yarn/cache/typescript-patch-f8edcd7439-1f8f3b6aae.zip/node_modules/typescript/",\
+        ["patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-bd21d74a9d-f53bfe97f7.zip/node_modules/typescript/",\
           "packageDependencies": [\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"]\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "HARD"\
         }]\

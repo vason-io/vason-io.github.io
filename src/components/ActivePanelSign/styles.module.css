@@ -1,10 +1,11 @@
 .container {
   position: relative;
   height: 20pt;
-  padding-left: 15pt
+  padding-left: 15pt;
 }
 
-.titlebarParentLeft, .titlebarParentRight {
+.titlebarParentLeft,
+.titlebarParentRight {
   position: absolute;
   left: 3px;
   top: 3px;

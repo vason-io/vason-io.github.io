@@ -8,9 +8,9 @@ generator.
 ## 👨‍💻 Development setup
 
 1. Install NVM
-    * For Linux: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
-    * For Windows: Go to https://github.com/coreybutler/nvm-windows/releases/latest, download and
-      run `nvm-setup.exe`
+   - For Linux: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
+   - For Windows: Go to https://github.com/coreybutler/nvm-windows/releases/latest, download and
+     run `nvm-setup.exe`
 2. Install node via nvm
    ```shell
    nvm install lts
@@ -42,7 +42,7 @@ generator.
 
 ## Miscellaneous
 
-* Convert SVG to ICO:
+- Convert SVG to ICO:
   https://image.online-convert.com/convert/svg-to-ico
 
 ## License

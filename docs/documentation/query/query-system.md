@@ -11,8 +11,8 @@ import RunButton from '@site/src/components/RunButton';
 
 The query system allows you to analyse JSON using queries.
 
-To open the `Query` window and analyze JSON from the left panel, 
-click the left <DummyButton>query</DummyButton> button or use <Key>Alt</Key> + <Key>Q</Key>. 
+To open the `Query` window and analyze JSON from the left panel,
+click the left <DummyButton>query</DummyButton> button or use <Key>Alt</Key> + <Key>Q</Key>.
 
 For JSON analysis from the right panel, click the right <DummyButton>query</DummyButton> button or use <Key>AltRight</Key> + <Key>Q</Key>.
 
@@ -30,7 +30,7 @@ Jsonata, similar to SQL in the world of databases, serves as a query language wi
 
 ### Recent queries
 
-At the top of the "Query" window, you will find a list of recent queries. 
+At the top of the "Query" window, you will find a list of recent queries.
 To execute a recent query, simply click on the corresponding item in the history list ...
 
 ### New query

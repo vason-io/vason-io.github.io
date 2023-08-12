@@ -8,12 +8,12 @@ import ActivePanelSign from '@site/src/components/ActivePanelSign';
 
 # Tree and compact views
 
-The `tree window` allows you to analyze JSON data in a hierarchical tree form, 
+The `tree window` allows you to analyze JSON data in a hierarchical tree form,
 providing a visual representation for easier understanding and navigation.
 
-Click the <DummyButton>tree</DummyButton> button on either the left or right side to open the `tree window`. 
+Click the <DummyButton>tree</DummyButton> button on either the left or right side to open the `tree window`.
 
-Opening the `tree window` from the left side allows you to analyze JSON content from the left JSON panel, 
+Opening the `tree window` from the left side allows you to analyze JSON content from the left JSON panel,
 while opening it from the right side allows analysis of JSON content from the right JSON panel.
 
 You can navigate through the JSON by expanding particular nodes or expand all nodes at once using the "expand all" button.
@@ -32,4 +32,3 @@ It is as well possible to analyze JSON in the compact form.
 In this tree form you can see the keys only without the corresponding values. This makes it easier to understand the structure of the JSON.
 
 You can see all the subkeys by mouse hover.
-

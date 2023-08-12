@@ -11,8 +11,8 @@ import RunButton from '@site/src/components/RunButton';
 
 Here you can write and send the HTTP REST Requests.
 
-To open the `HTTP` window and activate the `HTTP Requests` tab click the <DummyButton>http</DummyButton> button 
-or use <Key>Alt</Key> + <Key>T</Key>. 
+To open the `HTTP` window and activate the `HTTP Requests` tab click the <DummyButton>http</DummyButton> button
+or use <Key>Alt</Key> + <Key>T</Key>.
 
 ### APIs
 
@@ -35,7 +35,7 @@ To write a request, make sure you use the following elements:
 - name of request (will also be used for the script): <DummySpan color="#aaaaaa">### name of request</DummySpan>
 - HTTP method und url: <DummySpan color="#008000">GET, POST, PUT or DELETE</DummySpan> <DummySpan color="#cd1c1c">url</DummySpan>
 - Optionally, you can include:
-  - HTTP header(s): <DummySpan color="#650c84">header name</DummySpan>:  <DummySpan color="#650c84">header value</DummySpan> ...
+  - HTTP header(s): <DummySpan color="#650c84">header name</DummySpan>: <DummySpan color="#650c84">header value</DummySpan> ...
   - <DummySpan color="#0e420e">body</DummySpan>
 
 Feel free to use single-line-<DummySpan color="#cccccc">//comments</DummySpan> between request elements to provide additional context or notes.
