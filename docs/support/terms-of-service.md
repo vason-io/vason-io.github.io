@@ -7,7 +7,8 @@ description: ""
 
 ### Introduction and Acceptance of Terms
 
-Welcome to Vason ("the Service"). By accessing or using the Service, you agree to comply with and be bound by these
+Welcome to Vason ("the Service", "we," "us," or "Vason"). By accessing or using the Service, you agree to comply with
+and be bound by these
 Terms of Service ("Terms"). If you do not agree with these Terms, please do not use the Service.
 
 ### Definitions
@@ -66,10 +67,32 @@ to, the implied warranties of merchantability, fitness for a particular purpose,
 In no event shall Vason be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss
 of profits or revenues, whether incurred directly or indirectly.
 
+### Accountability for Content
+
+The contents of the Vason web pages have been created with the utmost care. However, Vason cannot guarantee the
+contents' accuracy, completeness or topicality. According to statutory provisions, Vason is furthermore responsible for
+its own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or
+saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove
+or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the
+Telemedia Act (TMG).
+
+### Accountability for Links
+
+Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the
+linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us,
+we will remove the respective link immediately.
+
 ### Indemnification
 
 You agree to indemnify and hold Vason harmless from any claims, damages, liabilities, or expenses arising out of your
 use of the Service, your violation of these Terms, or your violation of any rights of another.
+
+### Copyright
+
+Vason web pages and their contents are subject to German copyright law. Unless expressly permitted by law, every form of
+utilizing, reproducing or processing works subject to copyright protection on the Service requires the prior consent
+of the respective owner of the rights. Individual reproductions of a work are only allowed for private use. The
+materials from these pages are copyrighted and any unauthorized use may violate copyright laws.
 
 ### Governing Law and Dispute Resolution
 
