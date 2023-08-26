@@ -67,6 +67,12 @@ module.exports = {
             label: "Documentation",
           },
           {
+            type: "doc",
+            docId: "doc-placeholder",
+            position: "left",
+            label: "Documentation (Coming Soon)",
+          },
+          {
             type: "docSidebar",
             sidebarId: "support",
             position: "left",

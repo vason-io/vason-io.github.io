@@ -39,7 +39,7 @@ export default function Home(): ReactElement {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Documentation ${siteConfig.title}`}
+      title={`${siteConfig.title} Documentation`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
