@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.docusaurus" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/.yarn" />
+      <excludeFolder url="file://$MODULE_DIR$/static/img" />
       <excludePattern pattern=".pnp.*" />
     </content>
     <orderEntry type="inheritedJdk" />
