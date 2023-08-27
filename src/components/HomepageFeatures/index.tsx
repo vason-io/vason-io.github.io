@@ -7,32 +7,33 @@ type FeatureItem = {
   description: JSX.Element;
 };
 
-// TODO: Vason content
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
+    title: "Visualize",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Vason efficiently displays JSON documents in user-friendly formats,
+        simplifying data visualization and interpretation.
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
+    title: "Analyze",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Vason offers a built-in query system that allows you to thoroughly
+        analyze JSON documents. This feature empowers users to extract insights
+        and explore data effectively, enhancing the accuracy of data analysis.
       </>
     ),
   },
   {
-    title: "Powered by React",
+    title: "Transform",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Vason offers a comprehensive solution by allowing users to both
+        transform JSON documents using its built-in system and convert them into
+        different formats, enhancing data adaptability.
       </>
     ),
   },
@@ -43,7 +44,7 @@ function Feature({ title, description }: FeatureItem) {
     <div className={clsx("col col--4")}>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p style={{ textAlign: "justify" }}>{description}</p>
       </div>
     </div>
   );

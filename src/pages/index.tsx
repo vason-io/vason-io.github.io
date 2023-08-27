@@ -40,7 +40,7 @@ export default function Home(): ReactElement {
   return (
     <Layout
       title={`${siteConfig.title} Documentation`}
-      description="Description will go into a meta tag in <head />"
+      description="Visualize and Analyze JSON"
     >
       <HomepageHeader />
       <main>
