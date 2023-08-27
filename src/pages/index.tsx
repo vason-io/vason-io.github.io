@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import DemoImageUrl from "@site/static/img/demo.jpg";
 
 import styles from "./index.module.css";
 import { config } from "@site/src/util/config";
@@ -30,6 +31,9 @@ function HomepageHeader(): ReactElement {
             Support
           </Link>
         </div>
+      </div>
+      <div className={styles.demoContainer}>
+        <img src={DemoImageUrl} alt="Demo image" />
       </div>
     </header>
   );
