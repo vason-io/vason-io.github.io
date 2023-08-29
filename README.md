@@ -40,10 +40,12 @@ generator.
    yarn start
    ```
 
-## Miscellaneous
+## 📄 Development conventions
 
-- Convert SVG to ICO:
-  https://image.online-convert.com/convert/svg-to-ico
+- Use official palette generator for generating a color
+  scheme: https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
+- Use standard `996px` value for media query breaking points. Due to limitations of standard CSS variables, we can not
+  use them in media queries, hence we have to hardcode them for now
 
 ## License
 

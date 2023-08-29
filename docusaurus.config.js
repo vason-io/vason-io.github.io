@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import("@docusaurus/types").Config} */
 module.exports = {
   title: "Vason (Beta)",
-  tagline: "Visualize & Analyse JSON",
+  tagline: "Visualize & Analyze JSON",
   favicon: "img/logo.svg",
 
   // Set the production url of your site here
@@ -66,7 +66,7 @@ module.exports = {
             position: "left",
             label: "Documentation",
           },
-          {
+          !isDev && {
             type: "doc",
             docId: "doc-placeholder",
             position: "left",

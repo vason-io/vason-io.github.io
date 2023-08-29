@@ -4,8 +4,6 @@
  */
 
 .heroBanner {
-  display: flex;
-  padding: 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -17,22 +15,16 @@
   );
 }
 
-.demoContainer {
-  margin: 0 2rem;
+.bannerText {
+  margin: auto;
 }
 
-.demoContainer > img {
+.bannerImage {
   border-radius: 4px;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 1rem;
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

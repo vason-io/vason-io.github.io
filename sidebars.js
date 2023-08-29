@@ -1,4 +1,3 @@
-// @ts-check
 // https://docusaurus.io/docs/sidebar
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
