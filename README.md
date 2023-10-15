@@ -50,4 +50,4 @@ generator.
 ## License
 
 This documentation is licensed under the MIT license, terms of which can be found in
-the [LICENSE](LICENSE) file
+the [LICENSE](LICENSE) file.
