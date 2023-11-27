@@ -1,3 +1,26 @@
-# HTTP variables
+# HTTP Variables
 
-HTTP variables...
+By writing the HTTP requests you can use the Vason's variables. To do this, observe the following rules:
+
+- to use only single line variables;
+- to mask specific variables, include them in a comma-separated string under the maskedVariables parameter;
+- it is not permitted to delete the following keys: variables, maskedVariables, description;
+- Optional special variables may be used selectively for specific outcomes:
+    - &#123;&#123;<span style={{color: '#f9a156'}}>vsnLeftEditorContent</span>&#125;&#125; - substitute the content from left editor;
+    - &#123;&#123;<span style={{color: '#f9a156'}}>vsnRightEditorContent</span>&#125;&#125; - substitute the content from right editor.
+- New variables can be introduced, subject to specific requirements or need:
+    - in the dialog HTTP Variables, in the json format "`varName`": "`varValue`";
+    - use the format &#123;&#123;<span style={{color: '#f9a156'}}>varName</span>&#125;&#125; within the editor HTTP Requests.
+- The new variable will be automatically added to HTTP Variables and assigned an empty value.
+
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="HTTP Variables"
+    sources={{
+        light: '/img/HTTP_variables_light.png',
+        dark: '/img/HTTP_variables_dark.png',
+    }}
+/>
+
+1. Masked variables, included in the `maskedVariables` comma-separated string
