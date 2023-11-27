@@ -9,37 +9,38 @@ Retrieve JSON data for analysis by making HTTP requests to different APIs (cloud
 - develop and streamline ETL processes using Informatica or IBM Datastage;
 - conduct experiments with CI/CD processes on Microsoft Azure.
 
-### User interface
-
-1. To open the `HTTP client` window and activate the `HTTP Requests` tab click the http button
-or use Alt+T.
-
-2. Click the run button to execute the HTTP request.
-
 ### Syntax of HTTP-Request
 
-HTTP requests follow this syntax, with &#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;
-enclosed in double curly braces.
+HTTP requests follow this syntax:
 
-To write a request, make sure you use the following elements:
+to write a request, make sure you use the following **2 mandatory** elements:
 
-- name of request (will also be used for the script):
-    <span style={{color: '#aaaaaa'}}>### name of request</span>
-- HTTP method und url:
-    <span style={{color: '#008000'}}>GET, POST, PUT or DELETE</span>
+- name of request (will also be used for the script).
+    Перед названием запроса необходимо поставить три хэштега
+    <br></br><span style={{color: '#aaaaaa'}}>### name of request</span><br></br>
+- HTTP method und URL:
+    <br></br><span style={{color: '#008000'}}>GET, POST, PUT or DELETE</span>
     <span style={{color: '#cd1c1c'}}>URL</span>
 
-Optionally, you can include:
+**optionally**, you can include:
 
 - HTTP header(s):
-    <span style={{color: '#650c84'}}>header name:  header value ...</span>
-- <span style={{color: '#0e420e'}}>body</span>
+    <br></br><span style={{color: '#c178db'}}>header name:  header value ...</span>
+- <span style={{color: '#26bbae'}}>body</span>, то есть текстовый контент, например, в формате JSON.<br></br>
+    Inside the request, prepend the request body with a blank line.
 
-Feel free to use single-line-
+В URL, headers and body можно включать переменные обрамлённые
+    в фигурные скобки (enclosed in double curly braces):
+    &#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;. See next topic [HTTP Variables](HTTP%20Variables).
+
+В любом месте допустимо использование однострочных комментариев, которые  необходимо предварить двойным slash.
 <span style={{color: '#cccccc'}}>//comments</span>
-between request elements to provide additional context or notes.
 
-Inside the request, prepend the request body with a blank line.
+Перед несколькими запросами можно указать название группы запросов,
+это позволит, при наличии большого числа запросов, удобно работать со структурой, в том числе, быстро находить запросы.
+Название группы запросов необходимо предварить одним или двумя хэштегами.
+<br></br><span>## Название группы запросов</span>
+
 
 ### Example HTTP-Request
 
@@ -48,8 +49,35 @@ Inside the request, prepend the request body with a blank line.
 <span style={{color: '#aaaaaa'}}>### example request name</span><br></br>
 <span style={{color: '#008000'}}>GET</span>&nbsp;
 <span style={{color: '#cd1c1c'}}>https://dummyjson.com/carts</span><br></br>
-<span style={{color: '#650c84'}}>Accept: application/json</span><br></br><br></br>
-<span style={{color: '#0e420e'}}>&#123;key: 'example_body'&#125;</span>
+<span style={{color: '#c178db'}}>Accept: application/json</span><br></br><br></br>
+<span style={{color: '#26bbae'}}>&#123;key: 'example_body'&#125;</span>
 </span>
 
+### User interface
 
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="HTTP Requests"
+    sources={{
+        light: '/img/HTTP_requests_light.png',
+        dark: '/img/HTTP_requests_dark.png',
+    }}
+/>
+
+1. Click the run button to execute the HTTP request.
+
+2. Перед названием запроса необходимо поставить три хэштега.
+
+3. Click the `Structure` button to see the requests structure, в том числе названия групп запросов.
+
+4. На следующей строке после названия запроса необходимо указать HTTP method и URL, который может включать в себя переменные.
+
+5. На следующей строке можно опционально написать HTTP request headers. Values of header могут включать в себя переменные.
+
+6. Далее, пропустив одну строку, можно опционально написать HTTP request body.
+
+7. После выполнения запроса в тексте появится строка со статусом ответа и управляющими ссылками-кнопками.
+    Нажмите на дату и время ответа, если необходимо увидеть техническую информацию ответа, например, статус и заголовки ответа.
+
+8. Click the `to left` or `to right` to see в левой или в правой панели the response body, как правило в формате json.

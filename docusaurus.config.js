@@ -101,9 +101,9 @@ module.exports = {
                 },
                 config: {
                     // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-                    margin: 0,
-                    scrollOffset: 200,
-                    container: '[class*=docRoot]', //'[class*=docRoot]',
+                    margin: 70,
+                    scrollOffset: 300,
+                    container: '', // '#__docusaurus', //'[class*=docRoot_]',
                     template: '', //'#zoom-template',
                 }
             }
