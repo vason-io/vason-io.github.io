@@ -1,0 +1,55 @@
+# HTTP Requests
+
+### APIs
+
+Retrieve JSON data for analysis by making HTTP requests to different APIs (clouds). Explore and:
+
+- evaluate prominent APIs from Google or ChatGPT;
+- interact with IBM Watson API and Elasticsearch;
+- develop and streamline ETL processes using Informatica or IBM Datastage;
+- conduct experiments with CI/CD processes on Microsoft Azure.
+
+### User interface
+
+1. To open the `HTTP client` window and activate the `HTTP Requests` tab click the http button
+or use Alt+T.
+
+2. Click the run button to execute the HTTP request.
+
+### Syntax of HTTP-Request
+
+HTTP requests follow this syntax, with &#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;
+enclosed in double curly braces.
+
+To write a request, make sure you use the following elements:
+
+- name of request (will also be used for the script):
+    <span style={{color: '#aaaaaa'}}>### name of request</span>
+- HTTP method und url:
+    <span style={{color: '#008000'}}>GET, POST, PUT or DELETE</span>
+    <span style={{color: '#cd1c1c'}}>URL</span>
+
+Optionally, you can include:
+
+- HTTP header(s):
+    <span style={{color: '#650c84'}}>header name:  header value ...</span>
+- <span style={{color: '#0e420e'}}>body</span>
+
+Feel free to use single-line-
+<span style={{color: '#cccccc'}}>//comments</span>
+between request elements to provide additional context or notes.
+
+Inside the request, prepend the request body with a blank line.
+
+### Example HTTP-Request
+
+
+<span>
+<span style={{color: '#aaaaaa'}}>### example request name</span><br></br>
+<span style={{color: '#008000'}}>GET</span>&nbsp;
+<span style={{color: '#cd1c1c'}}>https://dummyjson.com/carts</span><br></br>
+<span style={{color: '#650c84'}}>Accept: application/json</span><br></br><br></br>
+<span style={{color: '#0e420e'}}>&#123;key: 'example_body'&#125;</span>
+</span>
+
+

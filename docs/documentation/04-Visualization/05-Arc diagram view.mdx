@@ -1,0 +1,29 @@
+# Arc diagram view
+
+The `Arc diagram` window allows you to analyze JSON data in a arc diagram form,
+providing a visual representation for easier understanding and navigation.
+
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="Arc diagram view"
+    sources={{
+        light: '/img/Arc_diagram_view_light.png',
+        dark: '/img/Arc_diagram_view_dark.png',
+    }}
+/>
+
+1. Choose the `Arc` element in `Extra view` dropdown on either the left or right side to open the `Arc diagram` window.
+Opening the `Arc diagram` window from the left side allows you to analyze JSON content from the left JSON panel,
+while opening it from the right side allows analysis of JSON content from the right JSON panel.
+
+2. You can synchronize the arc diagram element with the cursor position at the panel you are analyzing the JSON in. E.g.
+     - click somewhere on the JSON text on the left panel;
+     - then click on the ▷ sync button;
+
+3. You may also synchronize the other way around. Just click per arc diagram element on ◁ to position the cursor in the active JSON panel.
+
+4. Если выбран режим `Show only focused nodes by click`, то при клике на элемент диаграммы,
+    будет показан только соответствующий узел, его родительский и дочерние элементы.
+    Путь к родительскому элементу отображается оранжевым цветом, а к дочерним - зелёным.
+    Опции `Sort by name` и `Sort by level` позволяют сортировать элементы диаграммы по имени или по уровню вложенности ключей.

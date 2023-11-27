@@ -1,0 +1,91 @@
+# Intro
+
+HTTP Client предоставляет возможность посылать REST-запросы из браузера к
+внешним ресурсам по HTTP-протоколу и получать ответы, как правило, в JSON формате.
+
+Vason HTTP Client является легковесным аналогом таких популярных приложений, как `curl` или `postman`.
+
+Запросы в HTTP Client необходимо писать в текстовом формате (see next topic [HTTP Requests](HTTP%20Requests)).
+
+NOTE: Making HTTP request to third-party services is prohibited by browsers due to CORS security rules
+<a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">Wikipedia: Cross-origin resource sharing</a>.
+
+Vason provides a CORS-proxy service that solves this issue.
+Due to costs associated with maintaining CORS servers, this feature requires premium Vason subscription.
+
+### `HTTP client` window
+
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="HTTP Client"
+    sources={{
+        light: '/img/HTTP_client_light.png',
+        dark: '/img/HTTP_client_dark.png',
+    }}
+/>
+
+1. Click the `HTTP client` button on header to open the `HTTP client` window.
+
+2. Простой HTTP-запрос имеет следующий формат:
+    - Три решётки (###), за ними название или описание запроса
+    - На новой строке метод запроса (Например, GET) и за ним адрес ресурса (URL)
+    - Для дополнительной информации see next topic [HTTP Requests](HTTP%20Requests)
+
+3. Однако, так как HTTP Client является единственной feature Vason доступной по подписке, необходимо предварительно:
+    - зарегистрироваться в приложении Vason
+    - выполнить вход в систему
+    - оформить премиум подписку
+
+### Регистрация в приложении Vason
+
+<ThemedImage
+    alt="Register"
+    sources={{
+        light: '/img/Register_light.png',
+        dark: '/img/Register_dark.png',
+    }}
+/>
+
+### Вход в систему
+
+<ThemedImage
+    alt="Login"
+    sources={{
+        light: '/img/Login_light.png',
+        dark: '/img/Login_dark.png',
+    }}
+/>
+
+### Оформление подписки
+
+1. Откройте окно подписки
+2. Оплатите подписку на месяц или на год
+3. Оплатив подписку вы получите Premium account,
+    после этого вы сможете отправлять запросы с помощью Vason HTTP Client.
+    7 дней действует возможность бесплатного использования Vason HTTP Client.
+    В течение этого срока вы сможете отказаться от подписки не теряя деньги.
+
+<ThemedImage
+    alt="Manage subscriptions"
+    sources={{
+        light: '/img/Manage_subscriptions_light.png',
+        dark: '/img/Manage_subscriptions_dark.png',
+    }}
+/>
+
+<ThemedImage
+    alt="Manage subscriptions"
+    sources={{
+        light: '/img/Subscriptions_light.png',
+        dark: '/img/Subscriptions_dark.png',
+    }}
+/>
+
+<ThemedImage
+    alt="Premium"
+    sources={{
+        light: '/img/Premium_light.png',
+        dark: '/img/Premium_dark.png',
+    }}
+/>
