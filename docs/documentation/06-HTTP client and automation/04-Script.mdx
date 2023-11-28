@@ -1,3 +1,71 @@
 # Script
 
-Script...
+You can automate your processes, such as executing HTTP requests using loops and conditions.
+
+E.g., retrieve JSON from APIs, modify it using `Vason query system`, and transmit it to the cloud.
+
+The automation script is just simple javascript program, which you are writing by yourself.
+
+You can debug your script by placing the "debugger" keyword somethere in the script, and opening a browser's development tool.
+
+## Vason API
+
+Additionally, there are non-blocking Vason API functions available for sequential execution mode, ensuring operation without blocking the GUI:
+
+### HTTP Request functions
+
+### Query system functions
+
+### Service functions
+
+### Convert functions
+
+### Exaple script
+
+```js
+
+// There are non-blocking Vason API functions
+// available for sequential execution mode,
+// ensuring operation without blocking the GUI
+// Click help button to see the complete documentation
+// debugger // to debug your script place the "debugger"
+// keyword somethere and open a browser's development tool
+
+/* -------------- example: request hooks -------------- */
+function exampleBeforeHook(requestObject) {
+    CONSOLE('Start request: ' + requestObject.description)
+}
+
+BEFORE_REQ('example receive access token', exampleBeforeHook)
+
+AFTER_REQ('example receive access token', (responseData, responseObject, requestObject) => {
+    CONSOLE('End request: ' + requestObject.description)
+    VARS.token = responseData.token
+    // you can also store a cookie this way
+    // document.cookie = "token=" + data.token  + "; path=/"
+})
+
+/* -------------- example: request and assign response to global variable -------------- */
+// the variable can be assigne also in AFTER hook
+VARS.token = REQ('example receive access token').token
+
+// pause 1 sec
+SLEEP(1000)
+
+// write to Vason console
+CONSOLE('authorization token received: ' + VARS.token)
+
+/* -------------- example: request and loop -------------- */
+for (let planet of REQ('example get planets').planets) {
+    /* -------------- example: query to make the new json -------------- */
+    /* by using QUERY one can change one or more paticular properties in original json */
+    var newPlanet = QUERY(planet, '$~>|**.extra|{"distance": $number(distance) * 1000000}|')
+    CONSOLE('update distance for planet: ' + newPlanet.name)
+    SLEEP(1000)
+
+    /* -------------- example: rquest with new body -------------- */
+    var newDistance = REQ('example update planet', newPlanet).updatedObject.extra.distance
+    CONSOLE('new distance: ' + newDistance)
+}
+
+```

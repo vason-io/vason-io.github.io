@@ -2627,7 +2627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/core@npm:3.0.0, @docusaurus/core@npm:latest":
+"@docusaurus/core@npm:3.0.0":
   version: 3.0.0
   resolution: "@docusaurus/core@npm:3.0.0"
   dependencies:
@@ -2769,7 +2769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:3.0.0, @docusaurus/module-type-aliases@npm:latest":
+"@docusaurus/module-type-aliases@npm:3.0.0":
   version: 3.0.0
   resolution: "@docusaurus/module-type-aliases@npm:3.0.0"
   dependencies:
@@ -2944,7 +2944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/preset-classic@npm:latest":
+"@docusaurus/preset-classic@npm:3.0.0":
   version: 3.0.0
   resolution: "@docusaurus/preset-classic@npm:3.0.0"
   dependencies:
@@ -3079,7 +3079,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/types@npm:3.0.0, @docusaurus/types@npm:latest":
+"@docusaurus/types@npm:3.0.0":
   version: 3.0.0
   resolution: "@docusaurus/types@npm:3.0.0"
   dependencies:
@@ -3295,15 +3295,6 @@ __metadata:
     unist-util-visit: ^5.0.0
     vfile: ^6.0.0
   checksum: da4305dcfd9012521170e0ed439eb336900fb84a5784e5e3dac2144855fa603325477855e17a04b7c673cc24699cf2bfd611c958f591bb3a9afb5608c259bbd3
-  languageName: node
-  linkType: hard
-
-"@mdx-js/react@npm:^1.6.22":
-  version: 1.6.22
-  resolution: "@mdx-js/react@npm:1.6.22"
-  peerDependencies:
-    react: ^16.13.1 || ^17.0.0
-  checksum: bc84bd514bc127f898819a0c6f1a6915d9541011bd8aefa1fcc1c9bea8939f31051409e546bdec92babfa5b56092a16d05ef6d318304ac029299df5181dc94c8
   languageName: node
   linkType: hard
 
@@ -3656,13 +3647,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/docusaurus@npm:^1.0.5":
-  version: 1.0.7
-  resolution: "@tsconfig/docusaurus@npm:1.0.7"
-  checksum: 8f5b14005d90b2008f10daf03a5edec86d2a7603e5641c579ea936a5c2d165a8c3007a72254fc4c2adb0554d73062f52bb97b30ff818f01c9215957822f3c4db
-  languageName: node
-  linkType: hard
-
 "@types/acorn@npm:^4.0.0":
   version: 4.0.6
   resolution: "@types/acorn@npm:4.0.6"
@@ -3907,13 +3891,6 @@ __metadata:
   dependencies:
     undici-types: ~5.25.1
   checksum: ccfb7ac482c5a96edeb239893c5c099f5257fcc2ed9ae62fefdfbc782b79e16dbc2af9a85b379665237bf759904b44ca2be68e75d239e0297882aad42f61905c
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18":
-  version: 18.18.5
-  resolution: "@types/node@npm:18.18.5"
-  checksum: fc8c9b2bf226270cf9085a7dac76ce09dd7c3519ec9b687ee2b50385954ab3709c45ca82d002d1536e24286803cd194d7ab7008acebdcd6681b8b19d4277fa5c
   languageName: node
   linkType: hard
 
@@ -6036,22 +6013,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:."
   dependencies:
-    "@docusaurus/core": latest
-    "@docusaurus/module-type-aliases": latest
-    "@docusaurus/preset-classic": latest
+    "@docusaurus/core": 3.0.0
+    "@docusaurus/module-type-aliases": 3.0.0
+    "@docusaurus/preset-classic": 3.0.0
     "@docusaurus/theme-classic": ^3.0.0
-    "@docusaurus/types": latest
-    "@mdx-js/react": ^1.6.22
-    "@tsconfig/docusaurus": ^1.0.5
-    "@types/node": 18
+    "@docusaurus/types": 3.0.0
+    "@mdx-js/react": ^3.0.0
     clsx: ^1.2.1
     docusaurus-plugin-image-zoom: ^1.0.1
     husky: ^8.0.0
     lint-staged: ^13.2.3
     prettier: 3.0.1
-    prism-react-renderer: ^1.3.5
-    react: ^18.0.1
-    react-dom: ^18.0.1
+    prism-react-renderer: ^2.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
     tslib: ^2.6.2
     typescript: ^5.1.6
   languageName: unknown
@@ -10815,15 +10790,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^1.3.5":
-  version: 1.3.5
-  resolution: "prism-react-renderer@npm:1.3.5"
-  peerDependencies:
-    react: ">=0.14.9"
-  checksum: c18806dcbc4c0b4fd6fd15bd06b4f7c0a6da98d93af235c3e970854994eb9b59e23315abb6cfc29e69da26d36709a47e25da85ab27fed81b6812f0a52caf6dfa
-  languageName: node
-  linkType: hard
-
 "prism-react-renderer@npm:^2.1.0":
   version: 2.3.0
   resolution: "prism-react-renderer@npm:2.3.0"
@@ -11076,7 +11042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.0.1":
+"react-dom@npm:^18.0.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -11205,7 +11171,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.0.1":
+"react@npm:^18.0.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:

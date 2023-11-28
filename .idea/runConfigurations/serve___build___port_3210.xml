@@ -7,6 +7,7 @@
     </scripts>
     <arguments value="--build --port 3210" />
     <node-interpreter value="$PROJECT_DIR$/../../../../install/node-v18.18.0-win-x64/node" />
+    <package-manager value="$PROJECT_DIR$/.yarn/releases/yarn-3.6.4.cjs" />
     <envs />
     <method v="2" />
   </configuration>

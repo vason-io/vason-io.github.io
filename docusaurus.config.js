@@ -1,71 +1,74 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
+
+import {themes as prismThemes} from 'prism-react-renderer';
 
 const isDev = process.env.NODE_ENV === "development";
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-/** @type {import("@docusaurus/types").Config} */
-module.exports = {
-    title: "Vason (Beta)",
-    tagline: "Visualize & Analyze JSON",
-    favicon: "img/logo.svg",
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+    title: 'Vason (Beta)',
+    tagline: 'Visualize & Analyze JSON',
+    favicon: 'img/logo.svg',
 
     // Set the production url of your site here
-    url: "https://docs.vason.io",
+    url: 'https://docs.vason.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/",
+    baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: "vason-io", // Usually your GitHub org/user name.
-    projectName: "vason-io", // Usually your repo name.
+    organizationName: 'vason-io', // Usually your GitHub org/user name.
+    projectName: 'vason-io', // Usually your repo name.
 
-    onBrokenLinks: "throw",
-    onBrokenMarkdownLinks: "warn",
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-    // Even if you don't use internalization, you can use this field to set useful
-    // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
+    // Even if you don't use internationalization, you can use this field to set
+    // useful metadata like html lang. For example, if your site is Chinese, you
+    // may want to replace "en" with "zh-Hans".
     i18n: {
-        defaultLocale: "en",
-        locales: ["en"],
+        defaultLocale: 'en',
+        locales: ['en'],
     },
 
     presets: [
         [
-            "classic",
-            /** @type {import("@docusaurus/preset-classic").Options} */
+            'classic',
+            /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    sidebarPath: require.resolve("./sidebars.js"),
-                    routeBasePath: "/",
+                    sidebarPath: './sidebars.js',
+                    routeBasePath: "/", // Please change this to your repo. // Remove this to remove the "edit this page" links. // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
-                blog: false,
+                blog: false, // blog: { showReadingTime: true, // Please change this to your repo. // Remove this to remove the "edit this page" links. editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/', },
                 theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
+                    customCss: './src/css/custom.css',
                 },
             }),
         ],
     ],
 
     themeConfig:
-    /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
-        {
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        ({ // Replace with your project's social card image: 'img/docusaurus-social-card.jpg',
             navbar: {
-                title: "Vason",
+                title: 'Vason',
                 logo: {
-                    alt: "Vason logo",
-                    src: "img/logo.svg",
+                    alt: 'Vason logo',
+                    src: 'img/logo.svg',
                 },
                 items: [
                     isDev && {
-                        type: "docSidebar",
-                        sidebarId: "documentation",
-                        position: "left",
-                        label: "Documentation",
-                    },
+                        type: 'docSidebar',
+                        sidebarId: 'documentation',
+                        position: 'left',
+                        label: 'Documentation',
+                    }, // {to: '/blog', label: 'Blog', position: 'left'}, { href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right', },
                     !isDev && {
                         type: "doc",
                         docId: "doc-placeholder",
@@ -86,17 +89,17 @@ module.exports = {
                 ].filter(Boolean),
             },
             footer: {
-                style: "light",
+                style: 'light', // links: [ { title: 'Docs', items: [ { label: 'Tutorial', to: '/docs/intro', }, ], }, { title: 'Community', items: [ { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus', }, { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus', }, { label: 'Twitter', href: 'https://twitter.com/docusaurus', }, ], }, { title: 'More', items: [ { label: 'Blog', to: '/blog', }, { label: 'GitHub', href: 'https://github.com/facebook/docusaurus', }, ], }, ], copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
                 copyright: `Copyright © ${new Date().getFullYear()} Vason.`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme: prismThemes.github,
+                darkTheme: prismThemes.dracula,
             },
             zoom: {
                 selector: '.markdown > img',
                 background: {
-                    light: 'rgb(255, 255, 255)',
+                    light: 'rgb(50, 50, 50)', //'rgb(255, 255, 255)',
                     dark: 'rgb(50, 50, 50)'
                 },
                 config: {
@@ -107,9 +110,10 @@ module.exports = {
                     template: '', //'#zoom-template',
                 }
             }
-        },
-
+        }),
     plugins: [
         'docusaurus-plugin-image-zoom', // can also just be 'image-zoom'
     ],
 };
+
+export default config;
