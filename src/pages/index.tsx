@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import ThemedImage from '@theme/ThemedImage';
 
 import styles from "./index.module.css";
 
@@ -24,10 +25,12 @@ function HomepageHeader(): ReactElement {
           </Link>
         </div>
         <div className="col col--8 padding-vert--md">
-          <img
-            className={styles.bannerImage}
-            src={require("@site/static/img/demo.jpg").default}
-            alt="Banner image"
+          <ThemedImage
+              alt="Banner image"
+              sources={{
+                light: '/img/Demo_light.png',
+                dark: '/img/Demo_dark.png',
+              }}
           />
         </div>
       </div>

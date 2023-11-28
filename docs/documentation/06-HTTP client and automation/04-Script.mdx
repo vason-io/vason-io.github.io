@@ -12,15 +12,96 @@ You can debug your script by placing the "debugger" keyword somethere in the scr
 
 Additionally, there are non-blocking Vason API functions available for sequential execution mode, ensuring operation without blocking the GUI:
 
+### Service functions and variables
+
+- <span style={{color: '#26bbae'}}>CONSOLE</span> (<span style={{color: '#f9a156'}}>&lt;text or JSON&gt;</span>) - print text or JSON on console box
+- <span style={{color: '#26bbae'}}>ERROR</span> (<span style={{color: '#f9a156'}}>&lt;error message&gt;</span>) - print error message on console box
+- <span style={{color: '#26bbae'}}>SLEEP</span> (<span style={{color: '#f9a156'}}>&lt;milliseconds, e.g. 2000 - 2 sec&gt;</span>) - pause script
+- <span style={{color: '#26bbae'}}>VARS</span>.<span style={{color: '#f9a156'}}>&lt;variable name&gt;</span> - set global variable, see the tab "HTTP variables"
+
 ### HTTP Request functions
+
+- <details>
+        <summary>
+            <span style={{color: '#26bbae'}}>REQ</span> (<span style={{color: '#f9a156'}}>&lt;request description&gt;</span>,
+            optional: <span style={{color: '#f9a156'}}>&lt;request body&gt;</span>) - send HTTP request, see the tab "HTTP requests"
+        </summary>
+        - 1st parameter - request description after "###"
+        - 2nd parameter - request body only for POST/PUT requests
+    </details>
+- <details>
+        <summary>
+            <span style={{color: '#26bbae'}}>BEFORE_REQ</span> (<span style={{color: '#f9a156'}}>&lt;request description&gt;</span>,
+                <span style={{color: '#f9a156'}}>&lt;function(requestObject) &#123; ... &#125;&gt;</span>) -
+                register a request's BEFORE-hook, i.e. a function that can be executed before a request (see the tab "HTTP requests")
+        </summary>
+        - 1st parameter - the request description after "###"
+        - 2nd parameter - a callback function that will be executed before the request and will also be triggered when executing the request from the "HTTP requests" tab.
+            The callback function should have only one parameter, the request object with the properties:
+                - url - the request url
+                - method - the request method (GET, POST, PUT, DELETE)
+                - headers - the request headers object in the format: &lt;http header name&gt;: &lt;http header value&gt;. This parameter can be empty object.
+                - body - the request body. This parameter can be empty/null/undefined.
+                - description - the request description after "###"
+                    You can set the "sendBodyAsBytes" property to "true" in a request object to send its body as a byte array
+                    It is not possible to use variables defined in the script root inside the "BEFORE_REQ" callback function definition
+    </details>
+- <details>
+        <summary>
+            <span style={{color: '#26bbae'}}>AFTER_REQ</span> (<span style={{color: '#f9a156'}}>&lt;request description&gt;</span>,
+            <span style={{color: '#f9a156'}}>&lt;function(responseData, responseObject, requestObject) &#123; ... &#125;&gt;</span>) -
+            register a request's AFTER-hook, i.e. a function that can be executed after a request (see the tab "HTTP requests")
+        </summary>
+        - 1st parameter - the request description after "###"
+        - 2nd parameter - a function that will be executed after the request and will also be triggered when executing the request from the "HTTP requests" tab.
+            The callback function should have the 3 parameters:
+                - the response data: JSON, plain text or undefined
+                - the response object with the fields:
+                    - status - the response status
+                    - statusText - the response status text
+                    - reason - the response reason
+                    - responseJSON - the response JSON
+                    - responseText - the response text
+                - the request object with the fields:
+                    - url - the request url
+                    - method - the request method (GET, POST, PUT, DELETE)
+                    - headers - the request headers object in the format:
+                        <span style={{color: '#f9a156'}}>&lt;http header name&gt;</span>:
+                        <span style={{color: '#f9a156'}}>&lt;http header value&gt;</span>.
+                        This parameter can be empty object.
+                    - body - the request body. This parameter can be empty/null/undefined.
+                    - description - the request description after "###"
+            It is not possible to use variables defined in the script root inside "AFTER_REQ" callback function definition
+    </details>
 
 ### Query system functions
 
-### Service functions
+- <details>
+        <summary>
+            <span style={{color: '#26bbae'}}>QUERY</span> (<span style={{color: '#f9a156'}}>&lt;json&gt;</span>,
+            <span style={{color: '#f9a156'}}>&lt;query string&gt;</span>) - select/find value from json, or make the new json based on JSON parameter
+        </summary>
+        - 1st parameter - json or variable with json to query
+        - 2nd parameter - query string in jsonata format, see JSONata documentation
+            by using QUERY one can change one or more particular properties in original json
+    </details>
 
 ### Convert functions
 
-### Exaple script
+- <span style={{color: '#26bbae'}}>STRING_TO_LEFT_EDITOR</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>)
+    - <span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span> () - return string
+- <span style={{color: '#26bbae'}}>STRING_TO_RIGHT_EDITOR</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>)
+    - <span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span> () - return string
+- <span style={{color: '#26bbae'}}>STRING_TO_BASE64</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - encode string to base64 format
+    - <span style={{color: '#26bbae'}}>BASE64_TO_STRING</span> (<span style={{color: '#f9a156'}}>&lt;string in base64 format&gt;</span>) - decode string from base64 format
+- <span style={{color: '#26bbae'}}>JSON_TO_STRING</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert JSON to string form
+    - <span style={{color: '#26bbae'}}>STRING_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - convert string to JSON object
+- <span style={{color: '#26bbae'}}>XML_STRING_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;xml string&gt;</span>) - convert string in XML format to JSON
+    - <span style={{color: '#26bbae'}}>JSON_TO_XML_STRING</span> (<span style={{color: '#f9a156'}}>&lt;json&gt;</span>) - convert JSON to string in XML format
+- <span style={{color: '#26bbae'}}>JSON_TO_XML</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert JSON to XML
+    - <span style={{color: '#26bbae'}}>XML_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert XML to JSON
+
+## Exaple script
 
 ```js
 
@@ -69,3 +150,20 @@ for (let planet of REQ('example get planets').planets) {
 }
 
 ```
+
+## User interface
+
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="Script"
+    sources={{
+        light: '/img/Script_light.png',
+        dark: '/img/Script_dark.png',
+    }}
+/>
+
+1. Console box
+2. Script editor
+3. Click to execute script
+4. Click to interrupt script
