@@ -14,17 +14,17 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 ### Service functions and variables
 
+- <span style={{color: '#26bbae'}}>VARS</span>.<span style={{color: '#f9a156'}}>&lt;variable name&gt;</span> - set global variable, see the tab "HTTP variables"
 - <span style={{color: '#26bbae'}}>CONSOLE</span> (<span style={{color: '#f9a156'}}>&lt;text or JSON&gt;</span>) - print text or JSON on console box
 - <span style={{color: '#26bbae'}}>ERROR</span> (<span style={{color: '#f9a156'}}>&lt;error message&gt;</span>) - print error message on console box
 - <span style={{color: '#26bbae'}}>SLEEP</span> (<span style={{color: '#f9a156'}}>&lt;milliseconds, e.g. 2000 - 2 sec&gt;</span>) - pause script
-- <span style={{color: '#26bbae'}}>VARS</span>.<span style={{color: '#f9a156'}}>&lt;variable name&gt;</span> - set global variable, see the tab "HTTP variables"
 
 ### HTTP Request functions
 
 - <details>
         <summary>
             <span style={{color: '#26bbae'}}>REQ</span> (<span style={{color: '#f9a156'}}>&lt;request description&gt;</span>,
-            optional: <span style={{color: '#f9a156'}}>&lt;request body&gt;</span>) - send HTTP request, see the tab "HTTP requests"
+            optional: <span style={{color: '#f9a156'}}>&lt;request body: string&gt;</span>) - send HTTP request, see the tab "HTTP requests"
         </summary>
         - 1st parameter - request description after "###"
         - 2nd parameter - request body only for POST/PUT requests
@@ -86,20 +86,36 @@ Additionally, there are non-blocking Vason API functions available for sequentia
             by using QUERY one can change one or more particular properties in original json
     </details>
 
-### Convert functions
+### Convert functions: string to string
 
-- <span style={{color: '#26bbae'}}>STRING_TO_LEFT_EDITOR</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - set left editor value
-    - <span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span> () - return value from left editor as string
-- <span style={{color: '#26bbae'}}>STRING_TO_RIGHT_EDITOR</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - set right editor value
-    - <span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span> () - return value from right editor as string
-- <span style={{color: '#26bbae'}}>STRING_TO_BASE64</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - encode string to base64 format
-    - <span style={{color: '#26bbae'}}>BASE64_TO_STRING</span> (<span style={{color: '#f9a156'}}>&lt;string in base64 format&gt;</span>) - decode string from base64 format
-- <span style={{color: '#26bbae'}}>JSON_TO_STRING</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert JSON to string form
-    - <span style={{color: '#26bbae'}}>STRING_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;string&gt;</span>) - convert string to JSON object
-- <span style={{color: '#26bbae'}}>XML_STRING_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;xml string&gt;</span>) - convert string in XML format to JSON
-    - <span style={{color: '#26bbae'}}>JSON_TO_XML_STRING</span> (<span style={{color: '#f9a156'}}>&lt;json&gt;</span>) - convert JSON to string in XML format
-- <span style={{color: '#26bbae'}}>JSON_TO_XML</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert JSON to XML
-    - <span style={{color: '#26bbae'}}>XML_TO_JSON</span> (<span style={{color: '#f9a156'}}>&lt;json (javascript object)&gt;</span>) - convert XML to JSON
+|<span style={{color: '#f9a156'}}>parameter(P)</span>/return|JSON string|XML string|YAML string|TOML string|
+|-|-|-|-|-|
+|<span style={{color: '#f9a156'}}>&lt;JSON string&gt;</span>||<span style={{color: '#26bbae'}}>JSON_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;XML string&gt;</span>|<span style={{color: '#26bbae'}}>XML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)||<span style={{color: '#26bbae'}}>XML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>XML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;YAML string&gt;</span>|<span style={{color: '#26bbae'}}>YAML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>YAML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)||<span style={{color: '#26bbae'}}>YAML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;TOML string&gt;</span>|<span style={{color: '#26bbae'}}>TOML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)||
+
+
+|<span style={{color: '#f9a156'}}>parameter(P)</span>/return|BASE64 encoded string|any format string|
+|-|-|-|
+|<span style={{color: '#f9a156'}}>&lt;BASE64 encoded string&gt;</span>||<span style={{color: '#26bbae'}}>BASE64_TO_STRING</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;any format string&gt;</span>|<span style={{color: '#26bbae'}}>STRING_TO_BASE64</span>(<span style={{color: '#f9a156'}}>P</span>)||
+
+### Convert functions: extra
+
+|<span style={{color: '#f9a156'}}>Source</span>/Destination|String|Left Editor|Right Editor|
+|-|-|-|-|
+|<span style={{color: '#f9a156'}}>String</span>||<span style={{color: '#26bbae'}}>STRING_TO_LEFT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>STRING_TO_RIGHT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>Left Editor</span>|<span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span>()||
+|<span style={{color: '#f9a156'}}>Right Editor</span>|<span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span>()||
+
+
+|<span style={{color: '#f9a156'}}>parameter(P)</span>/return|string|JSON-object|XML-document|
+|-|-|-|-|
+|<span style={{color: '#f9a156'}}>string</span>||<span style={{color: '#26bbae'}}>PARSE_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>PARSE_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>JSON-object</span>|<span style={{color: '#26bbae'}}>STRINGIFY_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|||
+|<span style={{color: '#f9a156'}}>XML-document</span>|<span style={{color: '#26bbae'}}>STRINGIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|||
+
 
 ## Exaple script
 
@@ -167,3 +183,17 @@ import ThemedImage from '@theme/ThemedImage';
 2. Script editor
 3. Click to execute script
 4. Click to interrupt script
+
+## Debug
+
+<ThemedImage
+    alt="Debug"
+    sources={{
+        light: '/img/Debug_light.png',
+        dark: '/img/Debug_dark.png',
+    }}
+/>
+
+1. Write `debug` in script and open `Developer tools` (Ctrl+Shift+I)
+2. Click `Execute script` to start script
+3. Analyse script in debug mode
