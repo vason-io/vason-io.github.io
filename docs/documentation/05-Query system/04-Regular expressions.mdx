@@ -1,3 +1,43 @@
 # Regular expressions
 
-...
+
+Jsonata, similar to SQL in the world of databases, serves as a query language within the realm of JSON:
+
+- it offers you select, join, aggregate, sort, filter, and other powerful functionalities;
+- you can perform updates on JSON effortlessly;
+- conversion of JSON to other JSON structures or alternative text formats becomes feasible.
+
+### Example queries
+
+```text
+**.extra.velocity /* select nested node key */
+
+planets[0].name /* select key by index */
+
+planets.extra.{"a": velocity, "b": %.name} /* new json by %parent node */
+
+planets@$P.moons@$M[$M.planet_position=$P.position]{
+$P.name: $M.moon
+} /* join and group */
+```
+
+### User interface
+
+import ThemedImage from '@theme/ThemedImage';
+
+<ThemedImage
+    alt="Regular expressions"
+    sources={{
+        light: '/img/RegExp_light.png',
+        dark: '/img/RegExp_dark.png',
+    }}
+/>
+
+1. To open the `Query` window and analyze JSON from the left panel,
+click the left `Query` button or type `Alt+Q`.
+2. Queries
+ - In the middle of the `Query` window, there is a textarea where you can write your own Jsonata queries.
+Click on the run button or use `Ctrl+Enter` to execute it.
+ - To execute a recent query, simply click on the corresponding item in the recent (history) list.
+A list of recent queries can be found at the top of the "Query" window.
+3. Click run button to execute query and see the query result below
