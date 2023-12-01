@@ -95,20 +95,12 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 |<span style={{color: '#f9a156'}}>&lt;YAML string&gt;</span>|<span style={{color: '#26bbae'}}>YAML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>YAML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)||<span style={{color: '#26bbae'}}>YAML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
 |<span style={{color: '#f9a156'}}>&lt;TOML string&gt;</span>|<span style={{color: '#26bbae'}}>TOML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)||
 
-
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|BASE64 encoded string|any format string|
 |-|-|-|
 |<span style={{color: '#f9a156'}}>&lt;BASE64 encoded string&gt;</span>||<span style={{color: '#26bbae'}}>BASE64_TO_STRING</span>(<span style={{color: '#f9a156'}}>P</span>)|
 |<span style={{color: '#f9a156'}}>&lt;any format string&gt;</span>|<span style={{color: '#26bbae'}}>STRING_TO_BASE64</span>(<span style={{color: '#f9a156'}}>P</span>)||
 
-### Convert functions: extra
-
-|<span style={{color: '#f9a156'}}>Source</span>/Destination|String|Left Editor|Right Editor|
-|-|-|-|-|
-|<span style={{color: '#f9a156'}}>String</span>||<span style={{color: '#26bbae'}}>STRING_TO_LEFT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>STRING_TO_RIGHT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|
-|<span style={{color: '#f9a156'}}>Left Editor</span>|<span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span>()||
-|<span style={{color: '#f9a156'}}>Right Editor</span>|<span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span>()||
-
+### Convert functions: string to/from object
 
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|string|JSON-object|XML-document|
 |-|-|-|-|
@@ -116,10 +108,17 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 |<span style={{color: '#f9a156'}}>JSON-object</span>|<span style={{color: '#26bbae'}}>STRINGIFY_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|||
 |<span style={{color: '#f9a156'}}>XML-document</span>|<span style={{color: '#26bbae'}}>STRINGIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|||
 
+### UI interact functions
+
+|<span style={{color: '#f9a156'}}>Source</span>/Destination|String|Left Editor|Right Editor|
+|-|-|-|-|
+|<span style={{color: '#f9a156'}}>String</span>||<span style={{color: '#26bbae'}}>STRING_TO_LEFT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>STRING_TO_RIGHT_EDITOR</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>Left Editor</span>|<span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span>()||
+|<span style={{color: '#f9a156'}}>Right Editor</span>|<span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span>()||
 
 ## Exaple script
 
-```js
+```js showLineNumbers
 
 // There are non-blocking Vason API functions
 // available for sequential execution mode,
@@ -194,6 +193,6 @@ import ThemedImage from '@theme/ThemedImage';
     }}
 />
 
-1. Write `debug` in script and open `Developer tools` (Ctrl+Shift+I)
+1. Write `debug` in script and open `Developer tools` (e.g. in Chrome type Ctrl+Shift+I)
 2. Click `Execute script` to start script
-3. Analyse script in debug mode
+3. Analyze script in debug mode
