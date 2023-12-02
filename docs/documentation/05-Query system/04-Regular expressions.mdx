@@ -1,25 +1,16 @@
-# Regular expressions
+# Regular expressions filter and search
 
+### Introduction
 
+Vason позволяет проводить поиск по структуре JSON или
+фильтровать структуру JSON с помощью регулярных выражений.
 
-Jsonata, similar to SQL in the world of databases, serves as a query language within the realm of JSON:
-
-- it offers you select, join, aggregate, sort, filter, and other powerful functionalities;
-- you can perform updates on JSON effortlessly;
-- conversion of JSON to other JSON structures or alternative text formats becomes feasible.
-
-### Example queries
+### Examples regular expressions
 
 ```text
-**.extra.velocity /* select nested node key */
+(Jupiter|Saturn)
 
-planets[0].name /* select key by index */
-
-planets.extra.{"a": velocity, "b": %.name} /* new json by %parent node */
-
-planets@$P.moons@$M[$M.planet_position=$P.position]{
-$P.name: $M.moon
-} /* join and group */
+Voyager\s*\d
 ```
 
 ### User interface
@@ -34,11 +25,11 @@ import ThemedImage from '@theme/ThemedImage';
     }}
 />
 
-1. To open the `Query` window and analyze JSON from the left panel,
-click the left `Query` button or type `Alt+Q`.
-2. Queries
- - In the middle of the `Query` window, there is a textarea where you can write your own Jsonata queries.
-Click on the run button or use `Ctrl+Enter` to execute it.
- - To execute a recent query, simply click on the corresponding item in the recent (history) list.
-A list of recent queries can be found at the top of the "Query" window.
-3. Click run button to execute query and see the query result below
+1. To open the `Filter` window and filter JSON or search in JSON from the left panel,
+    click the left `Filter` button or type `Alt+F`.
+2. Regular expressions
+    - In the middle of the `Filter` window, there is a text editor where you can write your own regular expression.
+        Click on the run button or use `Ctrl+Enter` to execute it.
+    - To execute a recent query, simply click on the corresponding item in the recent (history) list.
+        A list of recent queries can be found at the top of the "Filter" window.
+3. See the filter/search result below
