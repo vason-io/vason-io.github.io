@@ -1,26 +1,31 @@
 # XSLT transformations
 
-Jsonata, similar to SQL in the world of databases, serves as a query language within the realm of JSON:
+The `XSLT` feature enables you to analyze JSON data using the XSLT language.
 
-- it offers you select, join, aggregate, sort, filter, and other powerful functionalities;
-- you can perform updates on JSON effortlessly;
-- conversion of JSON to other JSON structures or alternative text formats becomes feasible.
+- [Wikipedia: XSLT](https://en.wikipedia.org/wiki/XSLT)
+- [XSLT Introduction](https://www.w3schools.com/xml/xsl_intro.asp)
 
-### Example queries
+### XSLT
 
-```text
-**.extra.velocity /* select nested node key */
+Как правило язык XSLT применяется только к xml документам.
+Однако Vason позволяет использовать XSLT для трансформации структуры JSON.
 
-planets[0].name /* select key by index */
+### Example XSLT transformations
 
-planets.extra.{"a": velocity, "b": %.name} /* new json by %parent node */
-
-planets@$P.moons@$M[$M.planet_position=$P.position]{
-$P.name: $M.moon
-} /* join and group */
+```xml
+<xsl:template>
+    <xsl:text>[</xsl:text>
+    <xsl:for-each select="//planets">
+        <xsl:text>"</xsl:text>
+        <xsl:value-of select="name"/>
+        <xsl:text>"</xsl:text>
+        <xsl:if test="position() != last()">,</xsl:if>
+    </xsl:for-each>
+    <xsl:text>]</xsl:text>
+</xsl:template>
 ```
 
-### User interface
+### User interface `xslt` tab
 
 import ThemedImage from '@theme/ThemedImage';
 
@@ -32,11 +37,12 @@ import ThemedImage from '@theme/ThemedImage';
     }}
 />
 
-1. To open the `Query` window and analyze JSON from the left panel,
-click the left `Query` button or type `Alt+Q`.
-2. Queries
- - In the middle of the `Query` window, there is a textarea where you can write your own Jsonata queries.
-Click on the run button or use `Ctrl+Enter` to execute it.
- - To execute a recent query, simply click on the corresponding item in the recent (history) list.
-A list of recent queries can be found at the top of the "Query" window.
-3. Click run button to execute query and see the query result below
+1. To use the `XSLT` feature for analyze JSON from the left panel
+    open the `xpath/xslt` window by clicking the left `Xpath/Xslt`
+    button or typing `Alt+X` and choosing **the `xslt` tab**.
+2. XSLT transformations:
+    - In the middle of **the `xslt` tab**, there is a text editor where you can write your own XSLT transformations.
+        Click on the run button or type `Ctrl+Enter` to execute it.
+    - To execute a recent XSLT transformation immediately, simply click on the corresponding item in the recent (history) list.
+        A list of recent queries can be found at the top of **the `xslt` tab**.
+3. See the XSLT transformation result below after executing.
