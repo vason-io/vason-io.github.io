@@ -14,7 +14,7 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 ### Service functions and variables
 
-- <span style={{color: '#26bbae'}}>VARS</span>.<span style={{color: '#f9a156'}}>&lt;variable name&gt;</span> - set global variable, see the tab "HTTP variables"
+- <span style={{color: '#26bbae'}}>VARS</span>.<span style={{color: '#f9a156'}}>&lt;variable name&gt;</span> - set programmatically global variable, see the tab "HTTP variables"
 - <span style={{color: '#26bbae'}}>CONSOLE</span> (<span style={{color: '#f9a156'}}>&lt;text or JSON&gt;</span>) - print text or JSON on console box
 - <span style={{color: '#26bbae'}}>ERROR</span> (<span style={{color: '#f9a156'}}>&lt;error message&gt;</span>) - print error message on console box
 - <span style={{color: '#26bbae'}}>SLEEP</span> (<span style={{color: '#f9a156'}}>&lt;milliseconds, e.g. 2000 - 2 sec&gt;</span>) - pause script
@@ -24,7 +24,7 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 - <details>
         <summary>
             <span style={{color: '#26bbae'}}>REQ</span> (<span style={{color: '#f9a156'}}>&lt;request description&gt;</span>,
-            optional: <span style={{color: '#f9a156'}}>&lt;request body: string&gt;</span>) - send HTTP request, see the tab "HTTP requests"
+            optional: <span style={{color: '#f9a156'}}>&lt;request body: string&gt;</span>) - send programmatically HTTP request, see the tab "HTTP requests"
         </summary>
         - 1st parameter - request description after "###"
         - 2nd parameter - request body only for POST/PUT requests
@@ -79,14 +79,18 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 - <details>
         <summary>
             <span style={{color: '#26bbae'}}>QUERY</span> (<span style={{color: '#f9a156'}}>&lt;json&gt;</span>,
-            <span style={{color: '#f9a156'}}>&lt;query string&gt;</span>) - select/find value from json, or make the new json based on JSON parameter
+            <span style={{color: '#f9a156'}}>&lt;query string&gt;</span>) - select/find value from json, or make the new json based on JSON parameter using **Jsonata** language
         </summary>
         - 1st parameter - json or variable with json to query
-        - 2nd parameter - query string in jsonata format, see JSONata documentation
-            by using QUERY one can change one or more particular properties in original json
+        - 2nd parameter - query string in jsonata format, see [Query system](/category/query-system) and [JSONata documentation](https://docs.jsonata.org/overview)
+        - return - javascript object, array, number or string
     </details>
 
+
 ### Convert functions: string to string
+
+С помощью представленных ниже функций Вы можете конвертировать текст из одного формата в другой.
+Первая колонка представляет собой параметры функций, в заголовке находятся возвращаемые значения.
 
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|JSON string|XML string|YAML string|TOML string|
 |-|-|-|-|-|
@@ -102,6 +106,8 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 ### Convert functions: string to/from object
 
+Функции конвертации объектов в текстовое представление и наоборот
+
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|string|JSON-object|XML-document|
 |-|-|-|-|
 |<span style={{color: '#f9a156'}}>string</span>||<span style={{color: '#26bbae'}}>PARSE_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>PARSE_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|
@@ -109,6 +115,8 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 |<span style={{color: '#f9a156'}}>XML-document</span>|<span style={{color: '#26bbae'}}>STRINGIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|||
 
 ### UI interact functions
+
+Функции взаимодействия с редакторами в правой и левой панелях
 
 |<span style={{color: '#f9a156'}}>Source</span>/Destination|String|Left Editor|Right Editor|
 |-|-|-|-|
