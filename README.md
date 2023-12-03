@@ -13,11 +13,11 @@ generator.
      run `nvm-setup.exe`
 2. Install node via nvm
    ```shell
-   nvm install lts
+   nvm install --lts
    ```
 3. Set up global node version
    ```shell
-   nvm use lts
+   nvm use --lts
    ```
 4. Enable corepack
    ```shell
