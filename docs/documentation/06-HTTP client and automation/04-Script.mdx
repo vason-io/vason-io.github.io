@@ -94,10 +94,10 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|JSON string|XML string|YAML string|TOML string|
 |-|-|-|-|-|
-|<span style={{color: '#f9a156'}}>&lt;JSON string&gt;</span>||<span style={{color: '#26bbae'}}>JSON_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
-|<span style={{color: '#f9a156'}}>&lt;XML string&gt;</span>|<span style={{color: '#26bbae'}}>XML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)||<span style={{color: '#26bbae'}}>XML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>XML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
-|<span style={{color: '#f9a156'}}>&lt;YAML string&gt;</span>|<span style={{color: '#26bbae'}}>YAML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>YAML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)||<span style={{color: '#26bbae'}}>YAML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
-|<span style={{color: '#f9a156'}}>&lt;TOML string&gt;</span>|<span style={{color: '#26bbae'}}>TOML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)||
+|<span style={{color: '#f9a156'}}>&lt;JSON string&gt;</span>|<span style={{color: '#0adcc8'}}>PRETTIFY_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>JSON_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;XML string&gt;</span>|<span style={{color: '#26bbae'}}>XML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#0adcc8'}}>PRETTIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>XML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>XML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;YAML string&gt;</span>|<span style={{color: '#26bbae'}}>YAML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>YAML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#0adcc8'}}>PRETTIFY_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>YAML_TO_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
+|<span style={{color: '#f9a156'}}>&lt;TOML string&gt;</span>|<span style={{color: '#26bbae'}}>TOML_TO_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>TOML_TO_YAML</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#0adcc8'}}>PRETTIFY_TOML</span>(<span style={{color: '#f9a156'}}>P</span>)|
 
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|BASE64 encoded string|any format string|
 |-|-|-|
@@ -111,8 +111,8 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 |<span style={{color: '#f9a156'}}>parameter(P)</span>/return|string|JSON-object|XML-document|
 |-|-|-|-|
 |<span style={{color: '#f9a156'}}>string</span>||<span style={{color: '#26bbae'}}>PARSE_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|<span style={{color: '#26bbae'}}>PARSE_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|
-|<span style={{color: '#f9a156'}}>JSON-object</span>|<span style={{color: '#26bbae'}}>STRINGIFY_JSON</span>(<span style={{color: '#f9a156'}}>P</span>)|||
-|<span style={{color: '#f9a156'}}>XML-document</span>|<span style={{color: '#26bbae'}}>STRINGIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>)|||
+|<span style={{color: '#f9a156'}}>JSON-object</span>|<span style={{color: '#26bbae'}}>STRINGIFY_JSON</span>(<span style={{color: '#f9a156'}}>P</span>) or <span style={{color: '#26bbae'}}>JSON_TO_STRING</span>(<span style={{color: '#f9a156'}}>P</span>)|||
+|<span style={{color: '#f9a156'}}>XML-document</span>|<span style={{color: '#26bbae'}}>STRINGIFY_XML</span>(<span style={{color: '#f9a156'}}>P</span>) or <span style={{color: '#26bbae'}}>XML_TO_STRING</span>(<span style={{color: '#f9a156'}}>P</span>)|||
 
 ### UI interact functions
 
@@ -124,7 +124,7 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 |<span style={{color: '#f9a156'}}>Left Editor</span>|<span style={{color: '#26bbae'}}>LEFT_EDITOR_TO_STRING</span>()||
 |<span style={{color: '#f9a156'}}>Right Editor</span>|<span style={{color: '#26bbae'}}>RIGHT_EDITOR_TO_STRING</span>()||
 
-## Exaple script
+## Example script
 
 ```js showLineNumbers
 
