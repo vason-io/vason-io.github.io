@@ -4,42 +4,42 @@
 
 Retrieve JSON data for analysis by making HTTP requests to different APIs (clouds). Explore and:
 
-- evaluate prominent APIs from Google or ChatGPT;
-- interact with IBM Watson API and Elasticsearch;
-- develop and streamline ETL processes using Informatica or IBM Datastage;
-- conduct experiments with CI/CD processes on Microsoft Azure.
+- Evaluate prominent APIs from Google or ChatGPT
+- Interact with IBM Watson API and Elasticsearch
+- Develop and streamline ETL processes using Informatica or IBM Datastage
+- Conduct experiments with CI/CD processes on Microsoft Azure.
 
 ### Syntax of HTTP-Request
 
 HTTP requests follow this syntax:
 
-to write a request, make sure you use the following **2 mandatory** elements:
+To write a request, make sure you use the following **2 mandatory** elements:
 
-- name of request (will also be used for the script).
-    Перед названием запроса необходимо поставить три хэштега
+- Name of request (will also be used for the script).
+    Before the request title, you need to put three hashtags
     <br></br><span style={{color: '#aaaaaa'}}>### name of request</span><br></br>
 - HTTP method und URL:
     <br></br><span style={{color: '#008000'}}>GET, POST, PUT or DELETE</span>
     <span style={{color: '#cd1c1c'}}>URL</span>
 
-**optionally**, you can include:
+**Optionally**, you can include:
 
 - HTTP header(s):
     <br></br><span style={{color: '#c178db'}}>header name:  header value ...</span>
-- <span style={{color: '#26bbae'}}>body</span>, то есть текстовый контент, например, в формате JSON.<br></br>
+- <span style={{color: '#26bbae'}}>body</span>, This is the textual content, for example, in JSON format.<br></br>
     Inside the request, prepend the request body with a blank line.
 
-В URL, headers and body можно включать переменные обрамлённые
-    в фигурные скобки (enclosed in double curly braces):
+In URL, headers and body can be included the variables enclosed in double curly braces:
     &#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;. See next topic [HTTP Variables](HTTP%20Variables).
 
-В любом месте допустимо использование однострочных комментариев, которые  необходимо предварить двойным slash.
-<span style={{color: '#cccccc'}}>//comments</span>
+Single-line comments, preceded by a double slash, are allowed anywhere.
+<br></br><span style={{color: '#cccccc'}}>//comments</span>
 
-Перед несколькими запросами можно указать название группы запросов,
-это позволит, при наличии большого числа запросов, удобно работать со структурой, в том числе, быстро находить запросы.
-Название группы запросов необходимо предварить одним или двумя хэштегами.
-<br></br><span>## Название группы запросов</span>
+Before several requests, you can specify the name of the request group.
+This allows, when there are a large number of requests,
+to work conveniently with the structure, including quickly finding requests.
+The name of the request group should be preceded by one or two hashtags.
+<br></br><span style={{color: '#aaaaaa'}}>## Name of the request group</span>
 
 
 ### Example HTTP-Request
@@ -65,19 +65,19 @@ import ThemedImage from '@theme/ThemedImage';
     }}
 />
 
-1. Click the run button to execute the HTTP request.
+1. Click the run button to execute the HTTP request
 
-2. Перед названием запроса необходимо поставить три хэштега.
+2. Three hashtags are required before the request title
 
-3. Click the `Structure` button to see the requests structure, в том числе названия групп запросов.
+3. Click the `Structure` button to see the requests structure, including the names of request groups
 
-4. На следующей строке после названия запроса необходимо указать HTTP method и URL, который может включать в себя переменные.
+4. On the next line after the request title, you need to specify the HTTP method and URL, which may include variables
 
-5. На следующей строке можно опционально написать HTTP request headers. Values of header могут включать в себя переменные.
+5. On the next line, you can optionally write HTTP request headers. Header values may include variables
 
-6. Далее, пропустив одну строку, можно опционально написать HTTP request body.
+6. Next, skipping one line, you can optionally write the HTTP request body
 
-7. После выполнения запроса в тексте появится строка со статусом ответа и управляющими ссылками-кнопками.
-    Нажмите на дату и время ответа, если необходимо увидеть техническую информацию ответа, например, статус и заголовки ответа.
+7. After executing the request, a line with the response status and control buttons with the links will appear in the text.
+Click on the date and time of the response if you need to see technical information about the response, such as the status and response headers.
 
-8. Click the `to left` or `to right` to see в левой или в правой панели the response body, как правило в формате json.
+8. Click the `to left` or `to right` links to see in the left or right panel the response body, usually in the JSON format.

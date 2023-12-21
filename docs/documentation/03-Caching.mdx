@@ -2,15 +2,15 @@
 
 ### Templates and Workspaces
 
-Для ознакомления с примерами работы Vazon можно загрузить один из предустановленных Templates.
+To familiarize yourself with examples of Vazon's operation, one of the preinstalled templates can be loaded.
 
-Также можно сохранять содержимое редакторов или запросы  в памяти браузера, и работать с Workspaces.
+You can also save the content of editors or queries in the browser's memory and work with Workspaces.
 
-В памяти браузера кэшируется только выбранный контент.
+Only the selected content is cached in the browser's memory.
 
 ### Caching and Saving
 
-To save your documents (JSONs, HTTP requests, variables, script, and queries) in the browser's cache, simply select the caching checkboxes.
+To save your documents (JSONs, HTTP requests, variables, script and queries) in the browser's cache, simply select the caching checkboxes.
 
 This will ensure that your texts or queries are consistently updated in the browser cache (IndexedDB) with each modification.
 
@@ -24,12 +24,12 @@ import ThemedImage from '@theme/ThemedImage';
     }}
 />
 
-1. Контент или запросы в редакторах или окнах с установленными caching checkboxes будет сохраняться в памяти браузера при любых изменениях
-2. Если caching checkboxes не установлены, отредактированный контент или новые запросы <b>НЕ СОХРАНЯТСЯ !!!</b> при перезагрузке страницы в браузере.
+1. Content or queries in editors/windows, provided the caching checkboxes are enabled, will be saved in the browser's memory by any changes.
+2. If caching checkboxes are not enabled, the edited content or new queries <b>WILL NOT BE SAVED</b> upon page reload in the browser.
 
 :::warning
 
-Всегда обращайте внимание на оранжевый треугольник чтобы понять будет ли соответствующий контент сохранён или потерян при перезагрузке браузера
+Always pay attention to the orange triangle to understand whether the corresponding content will be saved or lost upon browser reload
 
 <ThemedImage
     alt="Caching warning"
@@ -40,12 +40,13 @@ import ThemedImage from '@theme/ThemedImage';
 />
 :::
 
-3. При установке caching checkboxes в любом редакторе или окне запросов создаётся новый workspace на основании загруженного ранее template.
-    - Внизу в правой части footer всегда показано какой Template or Workspace загружен в данный момент
-    - Окно  "Templates and Workspaces" позволяет загружать Workspaces, а также управлять Workspaces, то есть
-    - редактировать имя или описание Workspace,
-    - удалять Workspace,
-    - а также сохранять Workspace в файловую систему или загружать из неё
-    - Дополнительно для каждого Workspace указано: На основании какого Template он был создан и Какие компоненты кэшируются
-4. Окно  "Templates and Workspaces" также позволяет загружать Templates, То есть примеры работы с Vason
+3. When caching checkboxes are enabled in any editor or query window, a new workspace is created based on a previously loaded template.
+
+    - The current loaded Template or Workspace is always shown at the bottom in the right part of the footer
+    - The "Templates and Workspaces" window allows you to load Workspaces and manage them. This includes
+      - Editing the name or description of the Workspace
+      - Deleting the Workspace
+      - As well as saving the Workspace to the file system or loading it from there.
+    - Additionally, for each Workspace, it indicates: from which Template it was created and which components are cached.
+4. The "Templates and Workspaces" window also allows you to load Templates, providing examples of how Vason works.
 
