@@ -6,7 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const isDev = process.env.NODE_ENV === "development";
+//const isDev = process.env.NODE_ENV === "development";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -63,18 +63,19 @@ const config = {
                     src: 'img/logo.svg',
                 },
                 items: [
-                    isDev && {
+                    //isDev &&
+                    {
                         type: 'docSidebar',
                         sidebarId: 'documentation',
                         position: 'left',
                         label: 'Documentation',
                     }, // {to: '/blog', label: 'Blog', position: 'left'}, { href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right', },
-                    !isDev && {
-                        type: "doc",
-                        docId: "doc-placeholder",
-                        position: "left",
-                        label: "Documentation (Coming Soon)",
-                    },
+                    // !isDev && {
+                    //     type: "doc",
+                    //     docId: "doc-placeholder",
+                    //     position: "left",
+                    //     label: "Documentation (Coming Soon)",
+                    // },
                     {
                         type: "docSidebar",
                         sidebarId: "support",
