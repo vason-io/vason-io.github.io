@@ -2,11 +2,11 @@
 
 You can automate your processes, such as executing HTTP requests using loops and conditions.
 
-E.g., retrieve JSON from APIs, modify it using `Vason query system`, and transmit it to the cloud.
+E.g., retrieve JSON from APIs, modify it using `Vason query system` and transmit it to the cloud.
 
 The automation script is just simple javascript program, which you are writing by yourself.
 
-You can debug your script by placing the "debugger" keyword somethere in the script, and opening a browser's development tool.
+You can debug your script by placing the `debugger` keyword somewhere in the script, and opening a browser's development tool.
 
 ## Vason API
 
@@ -62,14 +62,14 @@ import Param from '@site/src/components/Param';
         - 1st parameter - the request description after "###"
         - 2nd parameter - a function that will be executed after the request and will also be triggered when executing the request from the "HTTP requests" tab.
             The callback function should have the 3 parameters:
-                - the response data: JSON, plain text or undefined
-                - the response object with the fields:
+                - The response data: JSON, plain text or undefined
+                - The response object with the fields:
                     - status - the response status
                     - statusText - the response status text
                     - reason - the response reason
                     - responseJSON - the response JSON
                     - responseText - the response text
-                - the request object with the fields:
+                - The request object with the fields:
                     - url - the request url
                     - method - the request method (GET, POST, PUT, DELETE)
                     - headers - the request headers object in the format:
@@ -98,8 +98,8 @@ import Param from '@site/src/components/Param';
 
 ### Convert functions: string to string
 
-С помощью представленных ниже функций Вы можете конвертировать текст из одного формата в другой.
-Первая колонка представляет собой параметры функций, в заголовке находятся возвращаемые значения.
+With the help of the functions presented below, you can convert text from one format to another.
+The first column represents the function parameters, and the return values are in the header.
 
 |<Param>parameter(P)</Param>/return|JSON string|XML string|YAML string|TOML string|
 |-|-|-|-|-|
@@ -115,7 +115,7 @@ import Param from '@site/src/components/Param';
 
 ### Convert functions: string to/from object
 
-Функции конвертации объектов в текстовое представление и наоборот
+Functions for converting objects to textual representation and vice versa
 
 |<Param>parameter(P)</Param>/return|string|JSON-object|XML-document|
 |-|-|-|-|
@@ -125,7 +125,7 @@ import Param from '@site/src/components/Param';
 
 ### UI interact functions
 
-Функции взаимодействия с редакторами в правой и левой панелях
+Functions for interacting with editors in the right and left panels
 
 |<Param>Source</Param>/Destination|String|Left Editor|Right Editor|
 |-|-|-|-|
@@ -142,7 +142,7 @@ import Param from '@site/src/components/Param';
 // ensuring operation without blocking the GUI
 // Click help button to see the complete documentation
 // debugger // to debug your script place the "debugger"
-// keyword somethere and open a browser's development tool
+// keyword somewhere and open a browser's development tool
 
 /* -------------- example: request hooks -------------- */
 function exampleBeforeHook(requestObject) {
