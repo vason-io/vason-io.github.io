@@ -1,5 +1,5 @@
-import React from "react";
-import Key from "@site/src/components/Key";
+import React from 'react';
+import Key from '@site/src/components/Key';
 
 export default function EscCloseWindow() {
   return (

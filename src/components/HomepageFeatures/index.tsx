@@ -1,6 +1,6 @@
-import React from "react";
-import clsx from "clsx";
-import styles from "./styles.module.css";
+import React from 'react';
+import clsx from 'clsx';
+import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
@@ -9,7 +9,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Visualize",
+    title: 'Visualize',
     description: (
       <>
         Vason efficiently displays JSON documents in user-friendly formats,
@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Analyze",
+    title: 'Analyze',
     description: (
       <>
         Vason offers a built-in query system that allows you to thoroughly
@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Transform",
+    title: 'Transform',
     description: (
       <>
         Vason offers a comprehensive solution by allowing users to both
@@ -41,10 +41,10 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ title, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
-        <p style={{ textAlign: "justify" }}>{description}</p>
+        <p style={{ textAlign: 'justify' }}>{description}</p>
       </div>
     </div>
   );
