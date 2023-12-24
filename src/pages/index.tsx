@@ -1,20 +1,20 @@
-import React, { type ReactElement } from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import React, { type ReactElement } from 'react';
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ThemedImage from '@theme/ThemedImage';
 
-import styles from "./index.module.css";
+import styles from './index.module.css';
 
 function HomepageHeader(): ReactElement {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="row">
-        <div className={clsx("col col--4 padding-vert--md", styles.bannerText)}>
+        <div className={clsx('col col--4 padding-vert--md', styles.bannerText)}>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <Link
@@ -26,11 +26,11 @@ function HomepageHeader(): ReactElement {
         </div>
         <div className="col col--8 padding-vert--md">
           <ThemedImage
-              alt="Banner image"
-              sources={{
-                light: '/img/Demo_light.png',
-                dark: '/img/Demo_dark.png',
-              }}
+            alt="Banner image"
+            sources={{
+              light: '/img/Demo_light.png',
+              dark: '/img/Demo_dark.png',
+            }}
           />
         </div>
       </div>
