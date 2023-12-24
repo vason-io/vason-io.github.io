@@ -17,126 +17,124 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 import Func from '@site/src/components/Func';
 import Param from '@site/src/components/Param';
 
-- <Func>VARS</Func>.<Param>variable name</Param> - set programmatically global variable, see the tab "HTTP variables"
-- <Func>CONSOLE</Func> (<Param>text or JSON</Param>) - print text or JSON on console box
-- <Func>ERROR</Func> (<Param>error message</Param>) - print error message on console box
+- <Func>VARS</Func>.<Param>variable name</Param> - set programmatically global variable,
+  see the tab "HTTP variables"
+- <Func>CONSOLE</Func> (<Param>text or JSON</Param>) - print text or JSON on console
+  box
+- <Func>ERROR</Func> (<Param>error message</Param>) - print error message on console
+  box
 - <Func>SLEEP</Func> (<Param>milliseconds, e.g. 2000 - 2 sec</Param>) - pause script
 
 ### HTTP Request functions
 
 - <details>
-        <summary>
-            <Func>REQ</Func> (
-                <Param>request description</Param>,
-                optional: <Param>request body: string</Param>
-            ) - send programmatically HTTP request, see the tab "HTTP requests"
-        </summary>
-        - 1st parameter - request description after "###"
-        - 2nd parameter - request body only for POST/PUT requests
-    </details>
+    <summary>
+      <Func>REQ</Func> (<Param>request description</Param>, optional:{' '}
+      <Param>request body: string</Param>) - send programmatically HTTP request,
+      see the tab "HTTP requests"
+    </summary>
+    - 1st parameter - request description after "###" - 2nd parameter - request body
+    only for POST/PUT requests
+  </details>
 - <details>
-        <summary>
-            <Func>BEFORE_REQ</Func> (
-                <Param>request description</Param>,
-                <Param>function(requestObject) &#123; ... &#125;</Param>
-            ) - register a request's BEFORE-hook, i.e. a function that can be executed before a request (see the tab "HTTP requests")
-        </summary>
-        - 1st parameter - the request description after "###"
-        - 2nd parameter - a callback function that will be executed before the request and will also be triggered when executing the request from the "HTTP requests" tab.
-            The callback function should have only one parameter, the request object with the properties:
-                - url - the request url
-                - method - the request method (GET, POST, PUT, DELETE)
-                - headers - the request headers object in the format: &lt;http header name&gt;: &lt;http header value&gt;. This parameter can be empty object.
-                - body - the request body. This parameter can be empty/null/undefined.
-                - description - the request description after "###"
-                    You can set the "sendBodyAsBytes" property to "true" in a request object to send its body as a byte array
-                    It is not possible to use variables defined in the script root inside the "BEFORE_REQ" callback function definition
-    </details>
+    <summary>
+      <Func>BEFORE_REQ</Func> (<Param>request description</Param>,
+      <Param>function(requestObject) &#123; ... &#125;</Param>) - register a
+      request's BEFORE-hook, i.e. a function that can be executed before a
+      request (see the tab "HTTP requests")
+    </summary>
+    - 1st parameter - the request description after "###" - 2nd parameter - a callback
+    function that will be executed before the request and will also be triggered
+    when executing the request from the "HTTP requests" tab. The callback function
+    should have only one parameter, the request object with the properties: - url
+    - the request url - method - the request method (GET, POST, PUT, DELETE) - headers
+    - the request headers object in the format: &lt;http header name&gt;: &lt;http
+    header value&gt;. This parameter can be empty object. - body - the request body.
+    This parameter can be empty/null/undefined. - description - the request description
+    after "###" You can set the "sendBodyAsBytes" property to "true" in a request
+    object to send its body as a byte array It is not possible to use variables defined
+    in the script root inside the "BEFORE_REQ" callback function definition
+  </details>
 - <details>
-        <summary>
-            <Func>AFTER_REQ</Func> (
-                <Param>request description</Param>,
-                <Param>function(responseData, responseObject, requestObject) &#123; ... &#125;</Param>
-            ) - register a request's AFTER-hook, i.e. a function that can be executed after a request (see the tab "HTTP requests")
-        </summary>
-        - 1st parameter - the request description after "###"
-        - 2nd parameter - a function that will be executed after the request and will also be triggered when executing the request from the "HTTP requests" tab.
-            The callback function should have the 3 parameters:
-                - The response data: JSON, plain text or undefined
-                - The response object with the fields:
-                    - status - the response status
-                    - statusText - the response status text
-                    - reason - the response reason
-                    - responseJSON - the response JSON
-                    - responseText - the response text
-                - The request object with the fields:
-                    - url - the request url
-                    - method - the request method (GET, POST, PUT, DELETE)
-                    - headers - the request headers object in the format:
-                        <span style={{color: '#f9a156'}}>&lt;http header name&gt;</span>:
-                        <span style={{color: '#f9a156'}}>&lt;http header value&gt;</span>.
-                        This parameter can be empty object.
-                    - body - the request body. This parameter can be empty/null/undefined.
-                    - description - the request description after "###"
-            It is not possible to use variables defined in the script root inside "AFTER_REQ" callback function definition
-    </details>
+    <summary>
+      <Func>AFTER_REQ</Func> (<Param>request description</Param>,
+      <Param>
+        function(responseData, responseObject, requestObject) &#123; ... &#125;
+      </Param>
+      ) - register a request's AFTER-hook, i.e. a function that can be executed after
+      a request (see the tab "HTTP requests")
+    </summary>
+    - 1st parameter - the request description after "###" - 2nd parameter - a function
+    that will be executed after the request and will also be triggered when executing
+    the request from the "HTTP requests" tab. The callback function should have the
+    3 parameters: - The response data: JSON, plain text or undefined - The response
+    object with the fields: - status - the response status - statusText - the response
+    status text - reason - the response reason - responseJSON - the response JSON
+    - responseText - the response text - The request object with the fields: - url
+    - the request url - method - the request method (GET, POST, PUT, DELETE) - headers
+    - the request headers object in the format:
+    <span style={{ color: '#f9a156' }}>&lt;http header name&gt;</span>:
+    <span style={{ color: '#f9a156' }}>&lt;http header value&gt;</span>. This
+    parameter can be empty object. - body - the request body. This parameter can
+    be empty/null/undefined. - description - the request description after "###"
+    It is not possible to use variables defined in the script root inside
+    "AFTER_REQ" callback function definition
+  </details>
 
 ### Query system functions
 
 - <details>
-        <summary>
-            <Func>QUERY</Func> (
-                <Param>json</Param>,
-                <Param>query string</Param>
-            ) - select/find value from json, or make the new json based on JSON parameter using **Jsonata** language
-        </summary>
-        - 1st parameter - json or variable with json to query
-        - 2nd parameter - query string in jsonata format, see [Query system](/category/query-system) and [JSONata documentation](https://docs.jsonata.org/overview)
-        - return - javascript object, array, number or string
-    </details>
-
+    <summary>
+      <Func>QUERY</Func> (<Param>json</Param>,<Param>query string</Param>) -
+      select/find value from json, or make the new json based on JSON parameter
+      using **Jsonata** language
+    </summary>
+    - 1st parameter - json or variable with json to query - 2nd parameter - query
+    string in jsonata format, see [Query system](/category/query-system) and [JSONata
+    documentation](https://docs.jsonata.org/overview) - return - javascript object,
+    array, number or string
+  </details>
 
 ### Convert functions: string to string
 
 With the help of the functions presented below, you can convert text from one format to another.
 The first column represents the function parameters, and the return values are in the header.
 
-|<Param>parameter(P)</Param>/return|JSON string|XML string|YAML string|TOML string|
-|-|-|-|-|-|
-|<Param>JSON string</Param>|<Func color='#0adcc8'>PRETTIFY_JSON</Func>(<Param>P</Param>)|<Func>JSON_TO_XML</Func>(<Param>P</Param>)|<Func>JSON_TO_YAML</Func>(<Param>P</Param>)|<Func>JSON_TO_TOML</Func>(<Param>P</Param>)|
-|<Param>XML string</Param>|<Func>XML_TO_JSON</Func>(<Param>P</Param>)|<Func color='#0adcc8'>PRETTIFY_XML</Func>(<Param>P</Param>)|<Func>XML_TO_YAML</Func>(<Param>P</Param>)|<Func>XML_TO_TOML</Func>(<Param>P</Param>)|
-|<Param>YAML string</Param>|<Func>YAML_TO_JSON</Func>(<Param>P</Param>)|<Func>YAML_TO_XML</Func>(<Param>P</Param>)|<Func color='#0adcc8'>PRETTIFY_YAML</Func>(<Param>P</Param>)|<Func>YAML_TO_TOML</Func>(<Param>P</Param>)|
-|<Param>TOML string</Param>|<Func>TOML_TO_JSON</Func>(<Param>P</Param>)|<Func>TOML_TO_XML</Func>(<Param>P</Param>)|<Func>TOML_TO_YAML</Func>(<Param>P</Param>)|<Func color='#0adcc8'>PRETTIFY_TOML</Func>(<Param>P</Param>)|
+| <Param>parameter(P)</Param>/return | JSON string                                                  | XML string                                                  | YAML string                                                  | TOML string                                                  |
+| ---------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <Param>JSON string</Param>         | <Func color='#0adcc8'>PRETTIFY_JSON</Func>(<Param>P</Param>) | <Func>JSON_TO_XML</Func>(<Param>P</Param>)                  | <Func>JSON_TO_YAML</Func>(<Param>P</Param>)                  | <Func>JSON_TO_TOML</Func>(<Param>P</Param>)                  |
+| <Param>XML string</Param>          | <Func>XML_TO_JSON</Func>(<Param>P</Param>)                   | <Func color='#0adcc8'>PRETTIFY_XML</Func>(<Param>P</Param>) | <Func>XML_TO_YAML</Func>(<Param>P</Param>)                   | <Func>XML_TO_TOML</Func>(<Param>P</Param>)                   |
+| <Param>YAML string</Param>         | <Func>YAML_TO_JSON</Func>(<Param>P</Param>)                  | <Func>YAML_TO_XML</Func>(<Param>P</Param>)                  | <Func color='#0adcc8'>PRETTIFY_YAML</Func>(<Param>P</Param>) | <Func>YAML_TO_TOML</Func>(<Param>P</Param>)                  |
+| <Param>TOML string</Param>         | <Func>TOML_TO_JSON</Func>(<Param>P</Param>)                  | <Func>TOML_TO_XML</Func>(<Param>P</Param>)                  | <Func>TOML_TO_YAML</Func>(<Param>P</Param>)                  | <Func color='#0adcc8'>PRETTIFY_TOML</Func>(<Param>P</Param>) |
 
-|<Param>parameter(P)</Param>/return|BASE64 encoded string|any format string|
-|-|-|-|
-|<Param>BASE64 encoded string</Param>||<Func>BASE64_TO_STRING</Func>(<Param>P</Param>)|
-|<Param>any format string</Param>|<Func>STRING_TO_BASE64</Func>(<Param>P</Param>)||
+| <Param>parameter(P)</Param>/return   | BASE64 encoded string                           | any format string                               |
+| ------------------------------------ | ----------------------------------------------- | ----------------------------------------------- |
+| <Param>BASE64 encoded string</Param> |                                                 | <Func>BASE64_TO_STRING</Func>(<Param>P</Param>) |
+| <Param>any format string</Param>     | <Func>STRING_TO_BASE64</Func>(<Param>P</Param>) |                                                 |
 
 ### Convert functions: string to/from object
 
 Functions for converting objects to textual representation and vice versa
 
-|<Param>parameter(P)</Param>/return|string|JSON-object|XML-document|
-|-|-|-|-|
-|<Param>string</Param>||<Func>PARSE_JSON</Func>(<Param>P</Param>)|<Func>PARSE_XML</Func>(<Param>P</Param>)|
-|<Param>JSON-object</Param>|<Func>STRINGIFY_JSON</Func>(<Param>P</Param>) or <Func>JSON_TO_STRING</Func>(<Param>P</Param>)|||
-|<Param>XML-document</Param>|<Func>STRINGIFY_XML</Func>(<Param>P</Param>) or <Func>XML_TO_STRING</Func>(<Param>P</Param>)|||
+| <Param>parameter(P)</Param>/return | string                                                                                         | JSON-object                               | XML-document                             |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------- |
+| <Param>string</Param>              |                                                                                                | <Func>PARSE_JSON</Func>(<Param>P</Param>) | <Func>PARSE_XML</Func>(<Param>P</Param>) |
+| <Param>JSON-object</Param>         | <Func>STRINGIFY_JSON</Func>(<Param>P</Param>) or <Func>JSON_TO_STRING</Func>(<Param>P</Param>) |                                           |                                          |
+| <Param>XML-document</Param>        | <Func>STRINGIFY_XML</Func>(<Param>P</Param>) or <Func>XML_TO_STRING</Func>(<Param>P</Param>)   |                                           |                                          |
 
 ### UI interact functions
 
 Functions for interacting with editors in the right and left panels
 
-|<Param>Source</Param>/Destination|String|Left Editor|Right Editor|
-|-|-|-|-|
-|<Param>String</Param>||<Func>STRING_TO_LEFT_EDITOR</Func>(<Param>P</Param>)|<Func>STRING_TO_RIGHT_EDITOR</Func>(<Param>P</Param>)|
-|<Param>Left Editor</Param>|<Func>LEFT_EDITOR_TO_STRING</Func>()||
-|<Param>Right Editor</Param>|<Func>RIGHT_EDITOR_TO_STRING</Func>()||
+| <Param>Source</Param>/Destination | String                                | Left Editor                                          | Right Editor                                          |
+| --------------------------------- | ------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------- |
+| <Param>String</Param>             |                                       | <Func>STRING_TO_LEFT_EDITOR</Func>(<Param>P</Param>) | <Func>STRING_TO_RIGHT_EDITOR</Func>(<Param>P</Param>) |
+| <Param>Left Editor</Param>        | <Func>LEFT_EDITOR_TO_STRING</Func>()  |                                                      |
+| <Param>Right Editor</Param>       | <Func>RIGHT_EDITOR_TO_STRING</Func>() |                                                      |
 
 ## Example script
 
 ```js showLineNumbers
-
 // There are non-blocking Vason API functions
 // available for sequential execution mode,
 // ensuring operation without blocking the GUI
@@ -146,41 +144,47 @@ Functions for interacting with editors in the right and left panels
 
 /* -------------- example: request hooks -------------- */
 function exampleBeforeHook(requestObject) {
-    CONSOLE('Start request: ' + requestObject.description)
+  CONSOLE('Start request: ' + requestObject.description);
 }
 
-BEFORE_REQ('example receive access token', exampleBeforeHook)
+BEFORE_REQ('example receive access token', exampleBeforeHook);
 
-AFTER_REQ('example receive access token', (responseData, responseObject, requestObject) => {
-    CONSOLE('End request: ' + requestObject.description)
-    VARS.token = responseData.token
+AFTER_REQ(
+  'example receive access token',
+  (responseData, responseObject, requestObject) => {
+    CONSOLE('End request: ' + requestObject.description);
+    VARS.token = responseData.token;
     // you can also store a cookie this way
     // document.cookie = "token=" + data.token  + "; path=/"
-})
+  },
+);
 
 /* -------------- example: request and assign response to global variable -------------- */
 // the variable can be assigne also in AFTER hook
-VARS.token = REQ('example receive access token').token
+VARS.token = REQ('example receive access token').token;
 
 // pause 1 sec
-SLEEP(1000)
+SLEEP(1000);
 
 // write to Vason console
-CONSOLE('authorization token received: ' + VARS.token)
+CONSOLE('authorization token received: ' + VARS.token);
 
 /* -------------- example: request and loop -------------- */
 for (let planet of REQ('example get planets').planets) {
-    /* -------------- example: query to make the new json -------------- */
-    /* by using QUERY one can change one or more paticular properties in original json */
-    var newPlanet = QUERY(planet, '$~>|**.extra|{"distance": $number(distance) * 1000000}|')
-    CONSOLE('update distance for planet: ' + newPlanet.name)
-    SLEEP(1000)
+  /* -------------- example: query to make the new json -------------- */
+  /* by using QUERY one can change one or more paticular properties in original json */
+  var newPlanet = QUERY(
+    planet,
+    '$~>|**.extra|{"distance": $number(distance) * 1000000}|',
+  );
+  CONSOLE('update distance for planet: ' + newPlanet.name);
+  SLEEP(1000);
 
-    /* -------------- example: rquest with new body -------------- */
-    var newDistance = REQ('example update planet', newPlanet).updatedObject.extra.distance
-    CONSOLE('new distance: ' + newDistance)
+  /* -------------- example: rquest with new body -------------- */
+  var newDistance = REQ('example update planet', newPlanet).updatedObject.extra
+    .distance;
+  CONSOLE('new distance: ' + newDistance);
 }
-
 ```
 
 ## User interface
@@ -188,11 +192,11 @@ for (let planet of REQ('example get planets').planets) {
 import ThemedImage from '@theme/ThemedImage';
 
 <ThemedImage
-    alt="Script"
-    sources={{
-        light: '/img/Script_light.png',
-        dark: '/img/Script_dark.png',
-    }}
+  alt="Script"
+  sources={{
+    light: '/img/Script_light.png',
+    dark: '/img/Script_dark.png',
+  }}
 />
 
 1. Console box
@@ -203,11 +207,11 @@ import ThemedImage from '@theme/ThemedImage';
 ## Debug
 
 <ThemedImage
-    alt="Debug"
-    sources={{
-        light: '/img/Debug_light.png',
-        dark: '/img/Debug_dark.png',
-    }}
+  alt="Debug"
+  sources={{
+    light: '/img/Debug_light.png',
+    dark: '/img/Debug_dark.png',
+  }}
 />
 
 1. Write `debug` in script and open `Developer tools` (e.g. in Chrome type Ctrl+Shift+I)

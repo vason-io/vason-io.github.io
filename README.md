@@ -19,25 +19,16 @@ generator.
    ```shell
    nvm use --lts
    ```
-4. Enable corepack
-   ```shell
-   corepack enable
-   corepack prepare yarn@stable --activate
-   ```
-5. Setup yarn
-   ```shell
-   npm install --global yarn
-   ```
 
-## 🏗️ Build and run the project
+## 🏗️ Start the project in development mode
 
-1. Download unplugged cache
+1. Download dependencies
    ```shell
-   yarn
+   npm i
    ```
 2. Start dev server
    ```shell
-   yarn start
+   npm start
    ```
 
 ## 📄 Development conventions

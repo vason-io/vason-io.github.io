@@ -1,3 +1,6 @@
+# Node
+/node_modules
+
 # Production
 /build
 
@@ -12,14 +15,4 @@
 .env.test.local
 .env.production.local
 
-yarn-debug.log*
-yarn-error.log*
-
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
 /SETUP.md

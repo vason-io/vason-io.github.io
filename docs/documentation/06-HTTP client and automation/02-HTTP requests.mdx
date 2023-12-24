@@ -16,41 +16,56 @@ HTTP requests follow this syntax:
 To write a request, make sure you use the following **2 mandatory** elements:
 
 - Name of request (will also be used for the script).
-    Before the request title, you need to put three hashtags
-    <br></br><span style={{color: '#aaaaaa'}}>### name of request</span><br></br>
+  Before the request title, you need to put three hashtags
+  {" "}
+  <br></br>
+  <span style={{ color: '#aaaaaa' }}>### name of request</span>
+  <br></br>
 - HTTP method und URL:
-    <br></br><span style={{color: '#008000'}}>GET, POST, PUT or DELETE</span>
-    <span style={{color: '#cd1c1c'}}>URL</span>
+  {" "}
+  <br></br>
+  <span style={{ color: '#008000' }}>GET, POST, PUT or DELETE</span>
+  <span style={{ color: '#cd1c1c' }}>URL</span>
 
 **Optionally**, you can include:
 
 - HTTP header(s):
-    <br></br><span style={{color: '#c178db'}}>header name:  header value ...</span>
-- <span style={{color: '#26bbae'}}>body</span>, This is the textual content, for example, in JSON format.<br></br>
-    Inside the request, prepend the request body with a blank line.
+  {" "}
+  <br></br>
+  <span style={{ color: '#c178db' }}>header name: header value ...</span>
+- <span style={{ color: '#26bbae' }}>body</span>, This is the textual content,
+  for example, in JSON format.<br></br>
+  Inside the request, prepend the request body with a blank line.
 
 In URL, headers and body can be included the variables enclosed in double curly braces:
-    &#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;. See next topic [HTTP Variables](HTTP%20Variables).
+&#123;&#123;<span style={{color: '#f9a156'}}>variable</span>&#125;&#125;. See next topic [HTTP Variables](HTTP%20Variables).
 
 Single-line comments, preceded by a double slash, are allowed anywhere.
-<br></br><span style={{color: '#cccccc'}}>//comments</span>
+
+<br></br>
+<span style={{ color: '#cccccc' }}>//comments</span>
 
 Before several requests, you can specify the name of the request group.
 This allows, when there are a large number of requests,
 to work conveniently with the structure, including quickly finding requests.
 The name of the request group should be preceded by one or two hashtags.
-<br></br><span style={{color: '#aaaaaa'}}>## Name of the request group</span>
 
+<br></br>
+<span style={{ color: '#aaaaaa' }}>## Name of the request group</span>
 
 ### Example HTTP-Request
 
-
 <span>
-<span style={{color: '#aaaaaa'}}>### example request name</span><br></br>
-<span style={{color: '#008000'}}>GET</span>&nbsp;
-<span style={{color: '#cd1c1c'}}>https</span><span style={{color: '#cd1c1c'}}>://dummyjson.com/carts</span><br></br>
-<span style={{color: '#c178db'}}>Accept: application/json</span><br></br><br></br>
-<span style={{color: '#26bbae'}}>&#123;key: 'example_body'&#125;</span>
+  <span style={{ color: '#aaaaaa' }}>### example request name</span>
+  <br></br>
+  <span style={{ color: '#008000' }}>GET</span>&nbsp;
+  <span style={{ color: '#cd1c1c' }}>https</span>
+  <span style={{ color: '#cd1c1c' }}>://dummyjson.com/carts</span>
+  <br></br>
+  <span style={{ color: '#c178db' }}>Accept: application/json</span>
+  <br></br>
+  <br></br>
+  <span style={{ color: '#26bbae' }}>&#123;key: 'example_body'&#125;</span>
 </span>
 
 ### User interface
@@ -58,11 +73,11 @@ The name of the request group should be preceded by one or two hashtags.
 import ThemedImage from '@theme/ThemedImage';
 
 <ThemedImage
-    alt="HTTP Requests"
-    sources={{
-        light: '/img/HTTP_requests_light.png',
-        dark: '/img/HTTP_requests_dark.png',
-    }}
+  alt="HTTP Requests"
+  sources={{
+    light: '/img/HTTP_requests_light.png',
+    dark: '/img/HTTP_requests_dark.png',
+  }}
 />
 
 1. Click the run button to execute the HTTP request
@@ -78,6 +93,6 @@ import ThemedImage from '@theme/ThemedImage';
 6. Next, skipping one line, you can optionally write the HTTP request body
 
 7. After executing the request, a line with the response status and control buttons with the links will appear in the text.
-Click on the date and time of the response if you need to see technical information about the response, such as the status and response headers.
+   Click on the date and time of the response if you need to see technical information about the response, such as the status and response headers.
 
 8. Click the `to left` or `to right` links to see in the left or right panel the response body, usually in the JSON format.

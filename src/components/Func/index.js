@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-export default function Func({color, children}) {
-    return (<span style={{color: color || "#26bbae",}}>{children}</span>);
+export default function Func({ color, children }) {
+  return <span style={{ color: color || '#26bbae' }}>{children}</span>;
 }
