@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import ThemedImage from '@theme/ThemedImage';
+import HomepageFeatures from '../components/HomepageFeatures';
+import ThemedImg from '../components/ThemedImg';
 
 import styles from './index.module.css';
 
@@ -25,13 +25,7 @@ function HomepageHeader(): ReactElement {
           </Link>
         </div>
         <div className="col col--8 padding-vert--md">
-          <ThemedImage
-            alt="Banner image"
-            sources={{
-              light: '/img/Demo_light.png',
-              dark: '/img/Demo_dark.png',
-            }}
-          />
+          <ThemedImg name="Demo"></ThemedImg>
         </div>
       </div>
     </header>

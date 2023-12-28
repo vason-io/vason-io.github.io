@@ -189,15 +189,9 @@ for (let planet of REQ('example get planets').planets) {
 
 ## User interface
 
-import ThemedImage from '@theme/ThemedImage';
+import ThemedImg from '@site/src/components/ThemedImg';
 
-<ThemedImage
-  alt="Script"
-  sources={{
-    light: '/img/Script_light.png',
-    dark: '/img/Script_dark.png',
-  }}
-/>
+<ThemedImg name="Script"></ThemedImg>
 
 1. Console box
 2. Script editor
@@ -206,13 +200,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 ## Debug
 
-<ThemedImage
-  alt="Debug"
-  sources={{
-    light: '/img/Debug_light.png',
-    dark: '/img/Debug_dark.png',
-  }}
-/>
+<ThemedImg name="Debug"></ThemedImg>
 
 1. Write `debug` in script and open `Developer tools` (e.g. in Chrome type Ctrl+Shift+I)
 2. Click `Execute script` to start script

@@ -2,6 +2,8 @@
 
 ### Templates and Workspaces
 
+[vason.io/open-workspaces](https://vason.io/open-workspaces)
+
 To familiarize yourself with examples of Vazon's operation, one of the preinstalled templates can be loaded.
 
 You can also save the content of editors or queries in the browser's memory and work with Workspaces.
@@ -14,15 +16,9 @@ To save your documents (JSONs, HTTP requests, variables, script and queries) in 
 
 This will ensure that your texts or queries are consistently updated in the browser cache (IndexedDB) with each modification.
 
-import ThemedImage from '@theme/ThemedImage';
+import ThemedImg from '@site/src/components/ThemedImg';
 
-<ThemedImage
-  alt="Caching"
-  sources={{
-    light: '/img/Caching_light.png',
-    dark: '/img/Caching_dark.png',
-  }}
-/>
+<ThemedImg alt="Caching" name="Caching"></ThemedImg>
 
 1. Content or queries in editors/windows, provided the caching checkboxes are enabled, will be saved in the browser's memory by any changes.
 2. If caching checkboxes are not enabled, the edited content or new queries <b>WILL NOT BE SAVED</b> upon page reload in the browser.
@@ -31,13 +27,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 Always pay attention to the orange triangle to understand whether the corresponding content will be saved or lost upon browser reload
 
-<ThemedImage
-  alt="Caching warning"
-  sources={{
-    light: '/img/Caching_warning_light.png',
-    dark: '/img/Caching_warning_dark.png',
-  }}
-/>
+<ThemedImg alt="Caching warning" name="Caching_warning"></ThemedImg>
 :::
 
 3. When caching checkboxes are enabled in any editor or query window, a new workspace is created based on a previously loaded template.
