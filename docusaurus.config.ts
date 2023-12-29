@@ -95,6 +95,11 @@ export default {
         template: '', //'#zoom-template',
       },
     },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
   } satisfies Preset.ThemeConfig,
   plugins: [
     'docusaurus-plugin-image-zoom', // can also just be 'image-zoom'
