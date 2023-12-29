@@ -1,18 +1,14 @@
 import React from 'react';
-import { useColorMode } from '@docusaurus/theme-common';
 
-export default function ThemedImg({ alt, name, children }) {
-  const { colorMode, setColorMode } = useColorMode();
+export default function ThemedImg({ alt, name }) {
   return (
     <img
-      data-alt={colorMode}
       src={
-        colorMode === 'dark'
-          ? `/img/${name ?? children}_dark.png`
-          : `/img/${name ?? children}_light.png`
+        document.body.parentElement.dataset.theme === 'dark' //document.getElementsByTagName('HTML')[0].dataset.theme === 'dark'
+          ? `/img/${name}_dark.png`
+          : `/img/${name}_light.png`
       }
-      alt={name ?? alt ?? children}
-      // title={alt ?? children}
+      alt={name ?? alt} // title={alt ?? children}
     />
   );
 }
