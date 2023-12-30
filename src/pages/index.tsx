@@ -13,19 +13,23 @@ function HomepageHeader(): ReactElement {
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="row">
-        <div className={clsx('col col--4 padding-vert--md', styles.bannerText)}>
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://vason.io"
+      <div className="container">
+        <div className="row">
+          <div
+            className={clsx('col col--4 padding-vert--md', styles.bannerText)}
           >
-            Open Vason
-          </Link>
-        </div>
-        <div className="col col--8 padding-vert--md">
-          <ThemedImg name="Demo" />
+            <h1 className="hero__title">{siteConfig.title}</h1>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <Link
+              className="button button--secondary button--lg"
+              to="https://vason.io"
+            >
+              Open Vason
+            </Link>
+          </div>
+          <div className="col col--8 padding-vert--md">
+            <ThemedImg name="Demo" />
+          </div>
         </div>
       </div>
     </header>
