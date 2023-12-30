@@ -18,8 +18,12 @@ function HomepageHeader(): ReactElement {
           <div
             className={clsx('col col--4 padding-vert--md', styles.bannerText)}
           >
-            <h1 className="hero__title">{siteConfig.title}</h1>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <h1 className="hero__title" style={{ color: 'white' }}>
+              {siteConfig.title}
+            </h1>
+            <p className="hero__subtitle" style={{ color: 'white' }}>
+              {siteConfig.tagline}
+            </p>
             <Link
               className="button button--secondary button--lg"
               to="https://vason.io"
