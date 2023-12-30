@@ -14,8 +14,7 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 ### Service functions and variables
 
-import Func from '@site/src/components/Func';
-import Param from '@site/src/components/Param';
+import { Func, Param } from '@site/src/components/Script';
 
 - <Func>VARS</Func>.<Param>variable name</Param> - set programmatically global variable,
   see the tab "HTTP variables"
@@ -189,9 +188,9 @@ for (let planet of REQ('example get planets').planets) {
 
 ## User interface
 
-import ThemedImg from '@site/src/components/ThemedImg';
+import { ThemedImg } from '@site/src/components/ThemedImg';
 
-<ThemedImg name="Script"></ThemedImg>
+<ThemedImg name="Script" />
 
 1. Console box
 2. Script editor
@@ -200,7 +199,7 @@ import ThemedImg from '@site/src/components/ThemedImg';
 
 ## Debug
 
-<ThemedImg name="Debug"></ThemedImg>
+<ThemedImg name="Debug" />
 
 1. Write `debug` in script and open `Developer tools` (e.g. in Chrome type Ctrl+Shift+I)
 2. Click `Execute script` to start script

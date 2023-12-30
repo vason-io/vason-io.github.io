@@ -82,11 +82,7 @@ export default {
       darkTheme: prismThemes.dracula,
     },
     zoom: {
-      //selector: '.markdown > img',
-      background: {
-        light: 'rgb(255, 255, 255)', //'rgb(255, 255, 255)', // 'rgb(50, 50, 50)',
-        dark: 'rgb(50, 50, 50)',
-      },
+      selector: 'img',
       config: {
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         margin: 70,
@@ -101,7 +97,5 @@ export default {
       respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [
-    'docusaurus-plugin-image-zoom', // can also just be 'image-zoom'
-  ],
+  plugins: ['./src/plugins/themed-zoom/index.ts'],
 } satisfies Config;
