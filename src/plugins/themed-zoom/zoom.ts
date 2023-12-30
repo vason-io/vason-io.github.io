@@ -48,15 +48,6 @@ export default (function () {
     attributeFilter: ['data-theme'],
   });
 
-  window.onload = () => {
-    if (zoomObject) {
-      zoomObject.detach();
-    }
-
-    config.background = getBackgroundColor(zoom);
-    zoomObject = mediumZoom(selector, config);
-  };
-
   // TODO: Get rid of this timeout
   setTimeout(() => {
     if (zoomObject) {
