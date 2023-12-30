@@ -25,7 +25,7 @@ function HomepageHeader(): ReactElement {
           </Link>
         </div>
         <div className="col col--8 padding-vert--md">
-          <ThemedImg name="Demo"></ThemedImg>
+          <ThemedImg name="Demo" />
         </div>
       </div>
     </header>
