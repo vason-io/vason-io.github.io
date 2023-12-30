@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemedImage from '@docusaurus/theme-classic/lib/theme/ThemedImage';
 
-export default /*const ThemedImg = */ ({ alt = undefined, name }) => (
+export const ThemedImg = ({ alt = undefined, name }) => (
   <ThemedImage
     alt={alt ?? name}
     sources={{
