@@ -7,15 +7,13 @@ if (ExecutionEnvironment.canUseDOM) {
   // after reloading the page, these triggers will not be set until the user
   // navigates somewhere.
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      const theme = document.body.parentElement.dataset.theme;
-      for (const img of document.getElementsByTagName('IMG')) {
-        img.src =
-          theme === 'dark'
-            ? img.src.replace('_light.', '_dark.')
-            : img.src.replace('_dark.', '_light.');
-      }
-    }, 100);
+    const theme = document.body.parentElement.dataset.theme;
+    for (const img of document.getElementsByTagName('IMG')) {
+      img.src =
+        theme === 'dark'
+          ? img.src.replace('_light.', '_dark.')
+          : img.src.replace('_dark.', '_light.');
+    }
   });
 }
 
