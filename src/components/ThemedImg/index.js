@@ -3,7 +3,6 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { useColorMode } from '@docusaurus/theme-common';
 
 if (ExecutionEnvironment.canUseDOM) {
-  document.onreadystatechange = function (e) {};
   // We also need to setCodeRevealTriggers when the page first loads; otherwise,
   // after reloading the page, these triggers will not be set until the user
   // navigates somewhere.
@@ -16,20 +15,13 @@ if (ExecutionEnvironment.canUseDOM) {
         img.src =
           theme === 'dark'
             ? img.src.replace('_light.', '_dark.')
-            : img.src.replace('_dark.', '_light.');
-        img.style.visibility = 'visible';
+            : img.src.replace('_dark.', '_light.'); //img.style.visibility = 'visible';
       }
-    }, 200);
+    }, 100);
   });
 }
 
 export default function ThemedImg({ alt, name }) {
-  const { colorMode } = useColorMode();
-  return (
-    <img
-      src={`/img/${name}_${colorMode}.png`}
-      alt={alt ?? name}
-      style={{ visibility: 'hidden' }}
-    />
-  );
+  const { colorMode } = useColorMode(); // style={{ visibility: 'hidden' }}
+  return <img src={`/img/${name}_${colorMode}.png`} alt={alt ?? name} />;
 }
