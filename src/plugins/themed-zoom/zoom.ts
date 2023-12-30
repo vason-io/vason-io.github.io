@@ -44,7 +44,7 @@ export default (function () {
     config.background = getBackgroundColor(zoom);
     zoomObject = mediumZoom(selector, config);
   }).observe(document.querySelector('html')!, {
-    // attributes: true,
+    attributes: true,
     attributeFilter: ['data-theme'],
   });
 
