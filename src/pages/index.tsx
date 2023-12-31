@@ -26,9 +26,9 @@ function HomepageHeader(): ReactElement {
             </p>
             <Link
               className="button button--secondary button--lg"
-              to="https://vason.io"
+              to="/documentation/Intro"
             >
-              Open Vason
+              Get Started
             </Link>
           </div>
           <div className="col col--8 padding-vert--md">

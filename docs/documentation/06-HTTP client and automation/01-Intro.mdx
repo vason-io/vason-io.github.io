@@ -1,13 +1,13 @@
 # Intro
 
-[vason.io/open-http](https://vason.io/open-http)
+[Lightweight online HTTP client (https://vason.io/open-http)](https://vason.io/open-http)
 
 The HTTP Client provides the ability to send REST requests from the browser to external resources via the HTTP protocol
 and receive responses, typically in JSON format.
 
 Vason HTTP Client is a lightweight counterpart to popular applications such as `curl` or `postman`.
 
-Requests in the HTTP Client need to be written in text format (see next topic [HTTP Requests](HTTP%20Requests)).
+Requests in the HTTP Client need to be written in text format (see next topic [HTTP Requests](/documentation/HTTP%20client%20and%20automation/HTTP%20Requests)).
 
 NOTE: Making HTTP request to third-party services is prohibited by browsers due to CORS security rules
 
@@ -21,11 +21,14 @@ NOTE: Making HTTP request to third-party services is prohibited by browsers due 
 Vason provides a CORS-proxy service that solves this issue.
 Due to costs associated with maintaining CORS servers, this feature requires premium Vason subscription.
 
+To facilitate operations with remote data, Vason features an HTTP client with an integrated scripting system.
+This enables users to automate the flow and processing of data. See [Script](/documentation/HTTP%20client%20and%20automation/Script)
+
 ### `HTTP client` window
 
 import { ThemedImg } from '@site/src/components/ThemedImg';
 
-<ThemedImg alt="HTTP Client" name="HTTP_client" />
+<ThemedImg alt="Lightweight online HTTP client" name="HTTP_client" />
 
 1. Click the `HTTP client` button on header to open the `HTTP client` window.
 
@@ -33,7 +36,7 @@ import { ThemedImg } from '@site/src/components/ThemedImg';
 
    - Three hash symbols (###), followed by the title or description of the request
    - On a new line, the HTTP request method (for example, GET) and the resource address (URL)
-   - For additional information see next topic [HTTP Requests](HTTP%20Requests)
+   - For additional information see next topic [HTTP Requests](/documentation/HTTP%20client%20and%20automation/HTTP%20Requests)
 
 3. However, since the HTTP Client is the only feature of Vason available by subscription, it is necessary to:
    - Register in the Vason application
@@ -57,7 +60,7 @@ import { ThemedImg } from '@site/src/components/ThemedImg';
    There is a 7-day free trial period during which you can use Vason HTTP Client for free.
    Within this period, you can cancel the subscription without losing money.
 
-<ThemedImg alt="Manage subscriptions" name="Manage_subscriptions" />
+<ThemedImg name="Manage_subscriptions" />
 
 <ThemedImg alt="Manage subscriptions" name="Subscriptions" />
 
