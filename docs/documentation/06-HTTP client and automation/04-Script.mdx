@@ -56,12 +56,12 @@ import { Func, Param } from '@site/src/components/Script';
   </details>
 - <details>
     <summary>
+      <!-- prettier-ignore-start -->
       <Func>AFTER_REQ</Func> (<Param>request description</Param>,
-      <Param>
-        function(responseData, responseObject, requestObject) &#123; ... &#125;
-      </Param>
-      ) - register a request's AFTER-hook, i.e. a function that can be executed after
+      <Param>function(responseData, responseObject, requestObject) &#123; ... &#125;</Param>) -
+      register a request's AFTER-hook, i.e. a function that can be executed after
       a request (see the tab "HTTP requests")
+      <!-- prettier-ignore-end -->
     </summary>
     - 1st parameter - the request description after "###" - 2nd parameter - a function
     that will be executed after the request and will also be triggered when executing
