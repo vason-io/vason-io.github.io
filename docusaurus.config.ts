@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 
 export default {
-  title: 'Vason (Beta)',
+  title: 'Vason',
   tagline: 'Visualize & Analyze JSON',
   favicon: 'img/logo.svg',
 
