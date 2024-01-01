@@ -68,7 +68,7 @@ export default {
         },
         {
           href: 'https://vason.io',
-          label: 'Open Vason',
+          label: 'Open Vason.io',
           position: 'right',
         },
       ],
