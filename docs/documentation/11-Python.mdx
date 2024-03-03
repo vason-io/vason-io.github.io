@@ -1,0 +1,87 @@
+# Python
+
+[Analyze JSON data using Python (https://vason.io/open-python)](https://vason.io/open-python)
+
+Vason allows you to analyze the JSON content using Python language.
+
+### Example: user interface and Jsonata query
+
+```python
+import pyjsonata
+
+# printing to the console
+print('Get planet name by index')
+# getting content from the user interface
+text = LEFT_EDITOR_TO_STRING()
+# analyzing by using pyjsonata library
+planet = pyjsonata.jsonata('**.planets[position="3"].name', text)
+# sending to output
+planet
+# output: Earth
+```
+
+### Example: HTTP request and Jsonata query
+
+```python
+import requests
+import pyjsonata
+
+# HTTP request
+x = requests.get('https://vason.io/examples/exampleGetPlanets')
+# analyzing by using pyjsonata library
+planet_names = pyjsonata.jsonata("""
+    **.planets[[0..8]].name[]
+""", x.text) # or x.json()
+# sending to output
+planet_names
+# output: array of planets
+```
+
+### Vason API
+
+Additionally, there are non-blocking Vason API functions available for sequential execution mode, ensuring operation without blocking the GUI:
+
+import { Func, Param } from '@site/src/components/Script';
+
+- <Func>CLEAR_CONSOLE</Func>() - clear console
+- <Func>CONSOLE</Func>(<Param>text or object</Param>) - print text or object on
+  console box
+- <Func>ERROR</Func>(<Param>error message</Param>) - print error message on
+  console box
+- <Func>STRING_TO_LEFT_EDITOR</Func>(<Param>text</Param>) - write text to the
+  left editor
+- <Func>LEFT_EDITOR_TO_STRING</Func>() - read text from the left editor
+- <Func>STRING_TO_RIGHT_EDITOR</Func>(<Param>text</Param>) - write text to the
+  right editor
+- <Func>RIGHT_EDITOR_TO_STRING</Func>() - read text from the right editor
+- <Func>SET_CURRENT_THEME</Func>(<Param>"light"|"dark"</Param>) - change current
+  user interface theme
+- <Func>GET_CURRENT_THEME</Func>() - get current user interface theme name.
+  Return: "light" or "dark"
+- <Func>GET_OUTPUT_DOM_SELECTOR</Func>() - get selector from the output
+  DOM-Element to interact with user interface using Javascript API in Python.
+  See example below:
+
+```python
+from js import document
+
+# get HTML element
+outputElement = document.querySelector(GET_OUTPUT_DOM_SELECTOR())
+# write text to HTML element
+outputElement.innerHTML = 'Test output text'
+```
+
+### User interface
+
+import { ThemedImg } from '@site/src/components/ThemedImg';
+
+<ThemedImg name="Query" />
+
+1. To open the `Query` window and analyze JSON from the left panel,
+   click the left `Query` button or type `Alt+Q`.
+2. Jsonata queries:
+   - In the middle of the `Query` window, there is a text editor where you can write your own Jsonata queries.
+     Click on the run button or type `Ctrl+Enter` to execute it.
+   - To execute a recent query immediately, simply click on the corresponding item in the recent (history) list.
+     A list of recent queries can be found at the top of the `Query` window.
+3. See the query result below after executing.
