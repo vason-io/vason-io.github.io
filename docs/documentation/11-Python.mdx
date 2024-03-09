@@ -58,15 +58,15 @@ import { Func, Param } from '@site/src/components/Script';
   user interface theme
 - <Func>GET_CURRENT_THEME</Func>() - get current user interface theme name.
   Return: "light" or "dark"
-- <Func>GET_OUTPUT_DOM_SELECTOR</Func>() - get selector from the output
-  DOM-Element to interact with user interface using Javascript API in Python.
-  See example below:
+- <Func>GET_OUTPUT_HTML_ELEMENT_ID</Func>() - get id from the output DOM-Element
+  to interact with user interface using Javascript API in Python. See example
+  below:
 
 ```python
 from js import document
 
 # get HTML element
-outputElement = document.querySelector(GET_OUTPUT_DOM_SELECTOR())
+outputElement = document.getElementById(GET_OUTPUT_HTML_ELEMENT_ID())
 # write text to HTML element
 outputElement.innerHTML = 'Test output text'
 ```
