@@ -8,6 +8,7 @@ Vason allows you to analyze the JSON content using Python language.
 
 ```python
 import pyjsonata
+from vason import LEFT_EDITOR_TO_STRING
 
 # printing to the console
 print('Get planet name by index')
@@ -43,32 +44,57 @@ Additionally, there are non-blocking Vason API functions available for sequentia
 
 import { Func, Param } from '@site/src/components/Script';
 
-- <Func>CLEAR_CONSOLE</Func>() - clear console
-- <Func>CONSOLE</Func>(<Param>text or object</Param>) - print text or object on
-  console box
-- <Func>ERROR</Func>(<Param>error message</Param>) - print error message on
-  console box
-- <Func>STRING_TO_LEFT_EDITOR</Func>(<Param>text</Param>) - write text to the
-  left editor
-- <Func>LEFT_EDITOR_TO_STRING</Func>() - read text from the left editor
-- <Func>STRING_TO_RIGHT_EDITOR</Func>(<Param>text</Param>) - write text to the
-  right editor
-- <Func>RIGHT_EDITOR_TO_STRING</Func>() - read text from the right editor
-- <Func>SET_CURRENT_THEME</Func>(<Param>"light"|"dark"</Param>) - change current
-  user interface theme
-- <Func>GET_CURRENT_THEME</Func>() - get current user interface theme name.
-  Return: "light" or "dark"
-- <Func>GET_OUTPUT_HTML_ELEMENT_ID</Func>() - get id from the output DOM-Element
-  to interact with user interface using Javascript API in Python. See example
-  below:
+- <Func>import vason</Func> or <Func>from vason import **FUNCTION**</Func> - to use
+  the Vason API, you need to import the vason module.
+- <Func>vason.CLEAR_CONSOLE</Func>() - clear console
+- <Func>vason.CONSOLE</Func>(<Param>text or object</Param>) - print text or
+  object on console box
+- <Func>vason.ERROR</Func>(<Param>error message</Param>) - print error message
+  on console box
+- <Func>vason.LEFT_EDITOR_TO_STRING</Func>() - return text from the left editor
+- <Func>vason.RIGHT_EDITOR_TO_STRING</Func>() - return text from the right
+  editor
+- <Func>vason.STRING_TO_LEFT_EDITOR</Func>(<Param>text</Param>) - write text to
+  the left editor
+- <Func>vason.STRING_TO_RIGHT_EDITOR</Func>(<Param>text</Param>) - write text to
+  the right editor
+- <Func>vason.SET_CURRENT_THEME</Func>(<Param>"light"|"dark"</Param>) - change
+  current user interface theme
+- <Func>vason.GET_CURRENT_THEME</Func>() - get current user interface theme
+  name. Return: "light" or "dark"
+- <Func>vason.DISPLAY_IN_OUTPUT</Func>(*values, target=None, append=True) - This
+  function is capable of introspecting the python object(s) it receives,
+  determining the correct method for displaying them on the webpage.
+
+  - \*values - a list of values to be displayed
+  - target - the DOM element where the content should be placed; by default, it's the output box with the DOM element ID = GET_OUTPUT_HTML_ELEMENT_ID()
+  - append - a flag indicating whether the output will be appended to the target
+
+- <Func>vason.GET_OUTPUT_HTML_ELEMENT_ID</Func>() - retrieve the ID of the
+  output DOM element to interact with the user interface using the JavaScript
+  API in Python. See example below:
 
 ```python
 from js import document
+from vason import GET_OUTPUT_HTML_ELEMENT_ID
 
 # get HTML element
 outputElement = document.getElementById(GET_OUTPUT_HTML_ELEMENT_ID())
 # write text to HTML element
 outputElement.innerHTML = 'Test output text'
+```
+
+- <Func>vason.LOAD_SCRIPTS_OR_STYLES</Func>(list or item) - Loading scripts or
+  styles from external sources, or executing a script from text. See examples
+  below:
+
+```python
+from vason import LOAD_SCRIPTS_OR_STYLES
+LOAD_SCRIPTS_OR_STYLES('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')
+LOAD_SCRIPTS_OR_STYLES([
+    'https://cdn.bokeh.org/bokeh/release/bokeh-3.2.2.min.js',
+    'Bokeh.set_log_level("info")'
+])
 ```
 
 ### User interface
@@ -79,9 +105,14 @@ import { ThemedImg } from '@site/src/components/ThemedImg';
 
 3. Utilizing Python:
    - Access the `Python` window by clicking the `Python` button or pressing `Alt+Y`.
-   - Edit Python scripts in the central section of the `Python` window.
-   - View output (text, JSON, or graphics) in the bottom left section.
+   - Edit Python scripts in the left section of the `Python` window.
+   - View output (text, JSON, or graphics) in the top right section.
    - Observe the console in the bottom right:
      - This console serves for intermediate output, such as print('text'),
-     - or functions as an interactive terminal, for instance, a = input('Enter text: ') for user input.
+     - or functions as an interactive terminal for user input, e.g.
+
+```python
+a = input('Enter text: ')
+```
+
 4. Explore Python examples in the `Python samples` window.
