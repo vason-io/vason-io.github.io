@@ -62,9 +62,13 @@ import { Func, Param } from '@site/src/components/Script';
   current user interface theme
 - <Func>vason.GET_CURRENT_THEME</Func>() - get current user interface theme
   name. Return: "light" or "dark"
-- <Func>vason.DISPLAY_IN_OUTPUT</Func>(*values, target=None, append=True) - This
-  function is capable of introspecting the python object(s) it receives,
-  determining the correct method for displaying them on the webpage.
+- <Func>vason.CLEAR_OUTPUT</Func>() - clear python output: output box with the
+  DOM element ID = GET_OUTPUT_HTML_ELEMENT_ID()
+- <Func>vason.DISPLAY_IN_OUTPUT</Func>(<Param>*values</Param>, <Param>
+    target=None
+  </Param>, <Param>append=True</Param>) - This function is capable of
+  introspecting the python object(s) it receives, determining the correct method
+  for displaying them on the webpage.
 
   - \*values - a list of values to be displayed
   - target - the DOM element where the content should be placed; by default, it's the output box with the DOM element ID = GET_OUTPUT_HTML_ELEMENT_ID()
@@ -84,9 +88,25 @@ outputElement = document.getElementById(GET_OUTPUT_HTML_ELEMENT_ID())
 outputElement.innerHTML = 'Test output text'
 ```
 
-- <Func>vason.LOAD_SCRIPTS_OR_STYLES</Func>(list or item) - Loading scripts or
-  styles from external sources, or executing a script from text. See examples
-  below:
+- <Func>vason.INSTALL_PYTHON_MODULES</Func>(<Param>list or item</Param>) -
+  explicit install external python modules
+
+  - "module_name" or "module_name==version";
+  - "wheel URI" - Python wheels are a pre-built binary package format for Python modules and libraries.
+    They are designed to make it easier to install and manage Python packages, by providing a convenient,
+    single-file format that can be downloaded and installed without the need to compile the package from source code. See example below:
+
+```python
+from vason import INSTALL_PYTHON_MODULES
+INSTALL_PYTHON_MODULES([
+    'https://cdn.holoviz.org/panel/1.4.1/dist/wheels/bokeh-3.4.0-py3-none-any.whl',
+    'https://cdn.holoviz.org/panel/1.4.1/dist/wheels/panel-1.4.1-py3-none-any.whl'
+])
+```
+
+- <Func>vason.LOAD_SCRIPTS_OR_STYLES</Func>(<Param>list or item</Param>) -
+  Loading scripts or styles from external sources, or executing a script from
+  text. See examples below:
 
 ```python
 from vason import LOAD_SCRIPTS_OR_STYLES
