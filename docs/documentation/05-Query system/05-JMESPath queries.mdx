@@ -1,0 +1,46 @@
+# JMESPath queries
+
+[Analyze JSON data using the JMESPath queries (https://vason.io/open-jmespath)](https://vason.io/open-jmespath)
+
+The query system enables you to analyze JSON data using the JMESPath language.
+See [JMESPath tutorial](https://jmespath.org/tutorial.html).
+See [JMESPath specification](https://jmespath.org/specification.html).
+
+### JMESPath
+
+Similar to SQL functions in the realm of databases, JMESPath functions as a query
+language specifically tailored for JSON data.
+
+It provides functionalities for selecting with basic expressions, slicing
+(including reverse order), various projections, and functions.
+
+### Examples JMESPath queries
+
+```text
+planets[2].name /* Basic Expression */
+
+planets[1:3].name /* Slicing */
+
+planets[::-1].name /* Slicing reverse order [start:stop:step]*/
+
+planets[?position=='3'].name /* Filter Projections*/
+
+planets[*].extra | [2:5].distance /* Pipe Expressions*/
+
+planets[].name | [?contains(@, 'ar') == `true`] /*Functions*/
+```
+
+### User interface
+
+import { ThemedImg } from '@site/src/components/ThemedImg';
+
+<ThemedImg name="JMESPath" />
+
+1. To open the `JMESPath` window and analyze JSON from the left panel,
+   click the left `JMESPath` button or type `Alt+J`.
+2. JMESPath queries:
+   - In the middle of the `JMESPath` window, there is a text editor where you can write your own JMESPath queries.
+     Click on the run button or type `Ctrl+Enter` to execute it.
+   - To execute a recent query immediately, simply click on the corresponding item in the recent (history) list.
+     A list of recent queries can be found at the top of the `JMESPath` window.
+3. See the query result below after executing.
