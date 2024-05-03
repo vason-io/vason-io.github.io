@@ -1,0 +1,50 @@
+# Format view
+
+[Format JSON (https://vason.io/open-format)](https://vason.io/open-format)
+
+The `JSON Format` window allows you to format JSON in various forms and copy formatted JSON to clipboard.
+
+See more information [NeatJSON](https://github.com/Phrogz/NeatJSON?tab=readme-ov-file#options).
+
+import { ThemedImg } from '@site/src/components/ThemedImg';
+
+<ThemedImg alt="JSON Format" name="Format_view" />
+
+## Format options
+
+- Sort Keys — Sort objects' keys in alphabetical order
+- Wrap — Maximum line width before wrapping
+- Align Values — When wrapping objects, line up the colons (per object)
+- Short — Put opening brackets on the same line as the first value, closing brackets on the same line as the last
+- This causes the indent and indentLast options to be ignored, instead basing indentation on array and object padding.
+- Indent — Whitespace used to indent each level when wrapping
+- Indent Last — Indent the closing bracket/brace for arrays and objects
+
+<hr />
+
+- Format Decimals — Decimal precision for non-integer numbers
+- Trim Trailing Zeros — Remove extra zeros at the end of floats, e.g. 1.2000 becomes 1.2
+- Force Floats Everywhere — Force every integer value written to the file to be a float, e.g. 12 becomes 12.0
+- Force Floats For — Specify an array of object key names under which all integer values are treated as floats. For example,
+
+  - serializing `{a:[1, 2, {a:3, b:4}], c:{a:5, d:6} with 'Force Floats For': ['a']`
+  - would produce `{"a":[1.0, 2.0, {"a":3.0, "b":4}], "c":{"a":5.0, "d":6}}`
+
+<hr />
+
+- Array Padding — Number of spaces to put inside brackets for arrays
+- Object Padding — Number of spaces to put inside braces for objects
+- Before Comma — Number of spaces to put before commas (for both arrays and objects)
+- After Comma — Number of spaces to put after commas (for both arrays and objects)
+
+<hr />
+
+- Before Colon 1 — Number of spaces before a colon when the object is on one line
+- After Colon 1 — Number of spaces after a colon when the object is on one line
+- Before Colon N — Number of spaces before a colon when the object is on multiple lines
+- After Colon N — Number of spaces after a colon when the object is on multiple lines
+
+<hr />
+
+- Escaped - Format JSON with escaped quotes to enable direct pasting within a string
+- Prettified - Format JSON without changing indentation
