@@ -39,3 +39,19 @@ import { ThemedImg } from '@site/src/components/ThemedImg';
 
      - https://perspective.finos.org/docs/expressions/
      - https://perspective.finos.org/docs/obj/perspective-viewer-exprtk/
+
+## CSV from Web
+
+Vason allows you to download CSV content from the internet. To do this, you need to:
+
+    - register in Vason
+    - log in
+    - subscribe ( see the topic [HTTP Intro](/documentation/HTTP%20client%20and%20automation/Intro) )
+    - and write a REST-request in an HTTP editor, for example:
+
+```
+  ### example get planets as CSV GET
+  https://vason.io/examples/exampleGetPlanetsAsCSV
+```
+
+    - If the HTTP request returns CSV content (Content-Type: text/csv), then by clicking on the appearing 'to csv' link, you can download the content into the 'CSV' window.
